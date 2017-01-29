@@ -1,4 +1,6 @@
 {
   "name": "ember-power-datepicker",
-  "dependencies": {}
+  "dependencies": {
+    "ember-cli-shims": "~0.1.1"
+  }
 }
