@@ -1,0 +1,63 @@
+<section class="datepicker-demo-canvas">
+  <h3>Basic usage: Minimal options</h3>
+
+  <h4>Small</h4>
+  {{#power-datepicker
+    selected=selected
+    onSelect=(action (mut selected) value="date")
+    as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" readonly value={{compute dp.helpers.format-date}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="demo-datepicker-small"}}
+      {{dp.nav}}{{dp.days}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+
+  <h4>Medium</h4>
+  {{#power-datepicker
+    selected=selected
+    onSelect=(action (mut selected) value="date")
+    as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" readonly value={{compute dp.helpers.format-date}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="demo-datepicker-medium"}}
+      {{dp.nav}}{{dp.days}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+
+  <h3>Bootstrap-datepicker like theme</h3>
+  {{#power-datepicker
+    selected=selected
+    onSelect=(action (mut selected) value="date")
+    as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" readonly value={{compute dp.helpers.format-date}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="demo-datepicker-bootstrap demo-datepicker-small"}}
+      {{dp.nav}}{{dp.days}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+
+  <h3>Material-datepicker like theme</h3>
+  <p>Not implemented</p>
+
+  <h3>Min date</h3>
+  <p>Not implemented</p>
+
+  <h3>Max date</h3>
+  <p>Not implemented</p>
+
+  <h3>Customize \{{datepicker.nav}} with a block</h3>
+  <p>Not implemented</p>
+
+  <h3>Customize \{{datepicker.days}} with a block</h3>
+  <p>Not implemented</p>
+
+  <h3>Datepicker that open with a button next to an input, not with the input itself</h3>
+  <p>Not implemented</p>
+</section>
