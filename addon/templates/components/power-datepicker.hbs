@@ -1,1 +1,17 @@
-{{yield}}
+{{#basic-dropdown as |dd|}}
+  {{#power-calendar
+    tagName=''
+    center=center
+    onCenterChange=onCenterChange
+    onSelect=onSelect
+    selected=selected as |cal|}}
+
+    {{yield (assign
+      cal
+      dd
+      (hash helpers=(hash format-date=(action formatDate selected format)))
+      deep=true
+    )}}
+
+  {{/power-calendar}}
+{{/basic-dropdown}}
