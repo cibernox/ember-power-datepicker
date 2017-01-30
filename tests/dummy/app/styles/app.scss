@@ -1,190 +1,6 @@
-// Colors
-$text-color: #333;
-$headings-text-color: #313131;
-$code-text-color: $text-color;
-
-// Red
-$brand-color: #0078c9;
-$brand-color-brighter: lighten($brand-color, 10%);
-$link-color: $brand-color;
-
-$light-gray: #ddd;
-$gray: #888;
-
-// Paddings
-$wrapper-padding: 0.5rem;
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-size: 100%;
-  line-height: 1.6;
-  font-family: 'Open sans', sans-serif;
-  touch-action: manipulation;
-}
-
-body {
-  color: $text-color;
-}
-
-a {
-  text-decoration: none;
-  color: $link-color;
-}
-
-img, iframe {
-  max-width: 100%;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
-  font-weight: bold;
-  line-height: 1.25;
-  color: $headings-text-color;
-  text-rendering: optimizeLegibility;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-/* Body text */
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-/* Lists */
-ul, ol, dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-bottom: .5rem;
-}
-
-/* Misc */
-hr {
-  position: relative;
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
-}
-
-abbr {
-  font-size: 85%;
-  font-weight: bold;
-  color: #555;
-  text-transform: uppercase;
-}
-abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
-}
-
-/* Code */
-code,
-pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-code {
-  color: $code-text-color;
-  padding: 0.2em 0;
-  margin: 0;
-  font-size: 75%;
-  background-color: rgba(0,0,0,0.04);
-  border-radius: 3px;
-
-  &::before,
-  &::after {
-    letter-spacing: -0.2em;
-    content: "\00a0";
-  }
-}
-pre {
-  max-width: calc(100vw - #{2 * $wrapper-padding});
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: .8rem;
-  line-height: 1.4;
-  white-space: pre;
-  word-break: break-all;
-  word-wrap: normal;
-  background-color: #f9f9f9;
-  overflow-x: auto;
-}
-pre code {
-  padding: 0;
-  font-size: 100%;
-  color: inherit;
-  background-color: transparent;
-
-  &::before,
-  &::after {
-    content: '';
-  }
-}
-
-/* Tables */
-table {
-  margin-bottom: 1rem;
-  width: 100%;
-  border: 1px solid #e5e5e5;
-  border-collapse: collapse;
-}
-td,
-th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
-}
-
-
-.datepicker-demo-canvas {
-  padding: 10px;
-}
-
-//
-//
-// DATEPICKER STYLES
-//
-//
-
-
+@import 'bootstrap';
 @import "ember-power-datepicker";
 
-//
-//
-// STYLES FOR DEMOS
-//
-//
-.demo-datepicker-bootstrap {
-  border: 1px solid rgba(0,0,0,.15);
-  box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  border-radius: 4px;
-}
 .demo-datepicker-small {
   @include ember-power-calendar($cell-size: 30px);
 }
@@ -193,58 +9,176 @@ th {
   @include ember-power-calendar($cell-size: 50px);
 }
 
+//
+//
+// Bootstrap
+//
+//
 
-.input-group {
-  position: relative;
-  display: table;
-  border-collapse: separate;
-}
-
-.input-group-addon {
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  color: #555;
-  text-align: center;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 1%;
-  white-space: nowrap;
-  vertical-align: middle;
-  display: table-cell;
-  &:last-child {
-    border-left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
-
-.input-group .form-control {
-  display: table-cell;
-  position: relative;
-  z-index: 2;
-  float: left;
-  width: 100%;
-  margin-bottom: 0;
-  &:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-.form-control {
+.dropdown-menu.ember-basic-dropdown-content {
   display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+.ember-basic-dropdown-content.bootstrap-datepicker-theme {
+  margin-top: 5px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+  &:after, &:before {
+    bottom: 100%;
+    left: 15px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 5px;
+    margin-left: -5px;
+  }
+  &:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-bottom-color: #cccccc;
+    border-width: 6px;
+    margin-left: -6px;
+  }
+}
+
+
+//
+//
+// MATERIAL
+//
+//
+.md-datepicker-input-container {
+  position: relative;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: inline-block;
+  width: auto;
+  border-bottom-color: rgba(0,0,0,0.12);
+}
+
+.md-datepicker-input {
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  min-width: 120px;
+  max-width: 328px;
+  padding: 0 0 5px;
+  color: rgba(0,0,0,0.87);
+}
+
+.md-datepicker-triangle-button.md-button.md-icon-button {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  padding: 8px;
+}
+.md-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 88px;
+  line-height: 36px;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+  box-sizing: border-box;
+  user-select: none;
+  border: 0;
+  padding: 0 6px;
+  margin: 6px 8px;
+  background: transparent;
+  color: currentColor;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
+}
+
+.md-button, .md-button:focus {
+  outline: none;
+}
+
+.md-datepicker-triangle-button {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  transform: translateY(-25%) translateX(45%);
+}
+
+.md-button.md-icon-button {
+  margin: 0 6px;
+  height: 40px;
+  min-width: 0;
+  line-height: 24px;
+  padding: 8px;
+  width: 40px;
+  border-radius: 50%;
+}
+.md-datepicker-triangle-button .md-datepicker-expand-triangle {
+  border-top-color: rgba(0,0,0,0.38);
+}
+.md-datepicker-expand-triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+}
+.ember-basic-dropdown-content.material-datepicker-theme {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  @include ember-power-calendar($cell-size: 40px, $row-padding-left: 15px, $row-padding-right: 15px);
+  .ember-power-calendar-day {
+    background-color: #fff;
+    color: rgba(0,0,0,0.87);
+    border-radius: 50%;
+    box-shadow: none;
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+  .ember-power-calendar-weekdays {
+    background-color: #e0e0e0;
+  }
+  .day-number {
+    border-radius: 50%;
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+  .ember-power-calendar-day--selected, .ember-power-calendar-day--selected:hover {
+    background: rgb(16,108,200);
+    color: rgba(255,255,255,0.87);
+    font-weight: normal;
+  }
+  .ember-power-calendar-nav-title {
+    line-height: 3;
+  }
+  .ember-power-calendar-nav-control {
+    color: rgba(0,0,0,0.54);
+    font-family: arial;
+    font-size: 200%;
+  }
+
+  // <svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24"><g><polygon points="15.4,7.4 14,6 8,12 14,18 15.4,16.6 10.8,12 "/></g></svg>
+}
+
