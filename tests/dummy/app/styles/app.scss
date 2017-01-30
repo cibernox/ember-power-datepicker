@@ -11,6 +11,49 @@
 
 //
 //
+// Animation
+//
+//
+
+@keyframes drop-fade-below {
+  0%   {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes drop-fade-above {
+  0%   {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slide-fade, %slide-fade {
+  will-change: transform, opacity;
+  &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-in {
+    animation: drop-fade-below .15s;
+  }
+  &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-out {
+    animation: drop-fade-below .15s reverse;
+  }
+  &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-in {
+    animation: drop-fade-above .15s;
+  }
+  &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-out {
+    animation: drop-fade-above .15s reverse;
+  }
+}
+
+//
+//
 // Bootstrap
 //
 //
@@ -145,6 +188,7 @@
   border-top: 5px solid;
 }
 .ember-basic-dropdown-content.material-datepicker-theme {
+  @extend %slide-fade;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
   @include ember-power-calendar($cell-size: 40px, $row-padding-left: 15px, $row-padding-right: 15px);
   .ember-power-calendar-day {
@@ -178,7 +222,5 @@
     font-family: arial;
     font-size: 200%;
   }
-
-  // <svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24"><g><polygon points="15.4,7.4 14,6 8,12 14,18 15.4,16.6 10.8,12 "/></g></svg>
 }
 
