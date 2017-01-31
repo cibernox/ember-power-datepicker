@@ -23,25 +23,20 @@ export default Ember.Component.extend({
     this.set('center', day.date);
   }),
 
-  // Actions
-  actions: {
-    handleInput(dropdown, calendar, e) {
-      let format =  this.get('format');
-      let maybeDate = e.target.value;
-      if (format.length > maybeDate.length) {
-        return;
-      }
-      let parsedMoment = this.get('moment').moment(maybeDate, format);
-      if (parsedMoment.isValid()) {
-        calendar.actions.select({ moment: parsedMoment, date: parsedMoment.toDate() });
-      }
-    },
-
-    handleSelect(dropdown, day, e) {
-      this.get('onSelect')(day, dropdown, e);
-      dropdown.actions.close();
-    }
-  },
+  // // Actions
+  // actions: {
+  //   handleInput(dropdown, calendar, e) {
+  //     let format =  this.get('format');
+  //     let maybeDate = e.target.value;
+  //     if (format.length > maybeDate.length) {
+  //       return;
+  //     }
+  //     let parsedMoment = this.get('moment').moment(maybeDate, format);
+  //     if (parsedMoment.isValid()) {
+  //       calendar.actions.select({ moment: parsedMoment, date: parsedMoment.toDate() });
+  //     }
+  //   }
+  // },
 
   // Helpers
   formatDate(selected, format) {

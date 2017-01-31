@@ -1,4 +1,12 @@
-{{#basic-dropdown as |dd|}}
+{{#basic-dropdown
+  disabled=disabled
+  onOpen=onOpen
+  onClose=onClose
+  onFocus=onFocus
+  horizontalPosition=horizontalPosition
+  verticalPosition=verticalPosition
+  renderInPlace=renderInPlace
+  as |dd|}}
   {{#power-calendar
     tagName=''
     center=center
@@ -6,12 +14,30 @@
     onSelect=onSelect
     selected=selected as |cal|}}
 
-    {{yield (assign
-      cal
-      dd
-      (hash helpers=(hash format-date=(action formatDate selected format)))
-      deep=true
-    )}}
+    {{#with (hash
+      uniqueId=dd.uniqueId
+      isOpen=dd.isOpen
+      disabled=dd.disabled
 
+      selected=cal.selected
+      loading=cal.loading
+      center=cal.center
+      locale=cal.locale
+
+      actions=(assign dd.actions cal.actions)
+    ) as |datepicker|}}
+      {{yield (assign
+        datepicker
+        (hash
+          trigger=(component dd.trigger dropdown=datepicker)
+          content=(component dd.content dropdown=datepicker)
+          nav=(component cal.nav calendar=datepicker)
+          days=(component cal.days calendar=datepicker)
+        )
+        (hash
+          helpers=(hash format-date=(action formatDate selected format))
+        )
+      )}}
+    {{/with}}
   {{/power-calendar}}
 {{/basic-dropdown}}
