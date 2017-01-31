@@ -61,15 +61,42 @@
 
 
     {{#dp.content class="material-datepicker-theme"}}
-      {{dp.nav}}{{dp.days weekdayFormat="min"}}
+      {{dp.nav}}
+      {{dp.days weekdayFormat="min"}}
     {{/dp.content}}
   {{/power-datepicker}}
 
   <h3>Min date</h3>
-  <p>Not implemented</p>
+  {{#power-datepicker
+    selected=selected
+    onSelect=(action (mut selected) value="date")
+    as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
+      {{dp.nav}}
+      {{dp.days minDate=twoDaysAgo}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+
 
   <h3>Max date</h3>
-  <p>Not implemented</p>
+  {{#power-datepicker
+    selected=selected
+    onSelect=(action (mut selected) value="date")
+    as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
+      {{dp.nav}}
+      {{dp.days maxDate=twoWeeksFromNow}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+
 
   <h3>Customize \{{datepicker.nav}} with a block</h3>
   <p>Not implemented</p>
