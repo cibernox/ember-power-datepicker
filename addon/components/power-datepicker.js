@@ -15,14 +15,6 @@ function fallbackAction(fallback) {
   });
 }
 
-export default Ember.Component.extend({
-  layout,
-  moment: service(),
-  format: 'YYYY/MM/DD',
-  onCenterChange: fallbackAction(function(day){
-    this.set('center', day.date);
-  }),
-
   // // Actions
   // actions: {
   //   handleInput(dropdown, calendar, e) {
@@ -37,6 +29,13 @@ export default Ember.Component.extend({
   //     }
   //   }
   // },
+export default Ember.Component.extend({
+  layout,
+  // moment: service(),
+  format: 'YYYY/MM/DD',
+  onCenterChange: fallbackAction(function(day){
+    this.set('center', day.date);
+  }),
 
   // Helpers
   formatDate(selected, format) {
