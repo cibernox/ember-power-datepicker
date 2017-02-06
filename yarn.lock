@@ -2020,9 +2020,9 @@ ember-pagefront@0.11.2:
     open "0.0.5"
     prompt "^0.2.14"
 
-ember-power-calendar@~0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.2.4.tgz#69d021cf447a2719a523c237b060cc1e20d20e62"
+ember-power-calendar@~0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.2.5.tgz#6e1900d91b8db1ce19c3019ddaade16e1103d04e"
   dependencies:
     ember-assign-helper "0.1.1"
     ember-cli-babel "^5.1.7"
