@@ -16,6 +16,7 @@
 
     {{#with (hash
       uniqueId=dd.uniqueId
+      calendarUniqueId=cal.uniqueId
       isOpen=dd.isOpen
       disabled=dd.disabled
 
@@ -29,10 +30,10 @@
       {{yield (assign
         datepicker
         (hash
-          trigger=(component dd.trigger dropdown=datepicker)
-          content=(component dd.content dropdown=datepicker)
+          trigger=(component dd.trigger dropdown=datepicker classNames="ember-power-datepicker-trigger")
+          content=(component dd.content dropdown=datepicker defaultClass="ember-power-datepicker-content")
           nav=(component cal.nav calendar=datepicker)
-          days=(component cal.days calendar=datepicker)
+          days=(component cal.days calendar=datepicker data-power-calendar-id=datepicker.calendarUniqueId)
         )
         (hash
           helpers=(hash format-date=(action formatDate selected format))

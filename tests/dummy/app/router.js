@@ -11,6 +11,7 @@ Router.map(function() {
 
   });
   this.route('legacy-demo');
+  this.route('helpers-testing');
 });
 
 export default Router;
