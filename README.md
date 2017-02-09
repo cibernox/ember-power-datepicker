@@ -1,27 +1,93 @@
 # ember-power-datepicker
 
-This README outlines the details of collaborating on this Ember addon.
+This addon combines [ember-basic-dropdown](www.ember-basic-dropdown.com) and [ember-power-calendar](www.ember-power-calendar.com) 
+into a single datepicker component that combines the public APIs of both components.
+
+As the components it is born from, it aims to be flexible and customizable so you can
+taylor your perfect datepicker.
+
+## Disclaimer
+
+This addon is in active development so expect some churn.
+A changelog file will be maintained to surface what changed and when and ease updates.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-power-datepicker`
-* `npm install`
-* `bower install`
+* `ember install ember-power-datepicker`
 
-## Running
+## Setup
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+If you are using sass, you can import the styles in your app.scss
 
-## Running Tests
+```scss
+@import "ember-power-datepicker";
+```
+This component [doesn't has any style of itself](https://github.com/cibernox/ember-power-datepicker/blob/master/app/styles/ember-power-datepicker.scss), so the only thing this import is doing is
+in turn importing the styles of **ember-basic-dropdown** and **ember-power-calendar**, so
+this is just a convenience.
+If you already use and import the styles of those addons yourself, you don't have to 
+import these.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Usage
 
-## Building
+The API of the component will remind you the APIs of its both parents. It leverages
+contextual components and most of the options you can pass to the original components
+are accepted by this addon.
 
-* `ember build`
+Let's see a basic example:
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```hbs
+  {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" class="form-control" readonly value={{moment-format selected}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
+      {{dp.nav}}
+      {{dp.days}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+```
+
+The `{{dp.trigger}}` and `{{dp.content}}` come from [ember-basic-dropdown](www.ember-basic-dropdown.com). 
+You can learn more about them here: https://www.ember-basic-dropdown.com/docs/how-to-use-it
+
+The `{{dp.nav}}` and `dp.days` components along with the `selected` and `onSelect` properties 
+come from [ember-power-calendar](www.ember-power-calendar.com).
+You can learm more about them it here: http://www.ember-power-calendar.com/docs/action-handling
+
+The `selected` and `onSelect` are the only mandatory options. You can omit them, but if
+you do and you don't allow users to select a date, why do you want a datepicker for?
+
+## Ember and Browser support
+
+This addon is only tested back to Ember 2.8. It may or may not work in older versions.
+Javascript wise the addon should work back to IE10, but CSS wise the default styles use
+flexbox, so expect only IE11 support unless you roll out your own template using `<table>`,
+which you can.
+
+## Testing
+
+In testing it requires phantomjs 2.0+. This addon also provides a convenient 
+`datepickerSelect('selector', dateOrMoment)` test helper to interact with the component in 
+acceptance tests.
+
+To import this helpers, import and invoke the function in your `/tests/helpers/start-app.js`
+
+```js
+import Ember from 'ember';
+import Application from '../../app';
+import config from '../../config/environment';
+import registerPowerDatepickerHelpers from '../../tests/helpers/ember-power-datepicker';
+
+registerPowerDatepickerHelpers();
+
+export default function startApp(attrs) {
+  //...
+}
+```
+
+## Contributing
+
+Contributions are welcomes. However if your contribution involves adding a new feature, 
+please open an issue before to share your idea and agree the details of the feature before starting implementing it.
