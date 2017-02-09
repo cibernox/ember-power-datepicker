@@ -1,10 +1,12 @@
 # ember-power-datepicker
 
-This addon combines [ember-basic-dropdown](www.ember-basic-dropdown.com) and [ember-power-calendar](www.ember-power-calendar.com) 
-into a single datepicker component that combines the public APIs of both components.
+This addon it's the last member of the [Ember Power Project](http://www.ember-power-select.com/support-the-project) family and it
+combines [ember-basic-dropdown](www.ember-basic-dropdown.com) and [ember-power-calendar](www.ember-power-calendar.com) 
+into a single datepicker component that exposes the public APIs of both components as one.
 
-As the components it is born from, it aims to be flexible and customizable so you can
-taylor your perfect datepicker.
+As the components this one is born from, it aims to be flexible and customizable so you can
+taylor your perfect datepicker. For that it extrictly follows DDAU approach and all its
+subcomponents can be omitted or replaced by your own.
 
 ## Disclaimer
 
