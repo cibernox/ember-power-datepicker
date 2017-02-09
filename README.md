@@ -57,7 +57,7 @@ come from [ember-power-calendar](www.ember-power-calendar.com).
 You can learm more about them it here: http://www.ember-power-calendar.com/docs/action-handling
 
 The `selected` and `onSelect` are the only mandatory options. You can omit them, but if
-you do and you don't allow users to select a date, why do you want a datepicker for?
+you do and you don't allow users to select a date, what do you want a datepicker for?
 
 ## Ember and Browser support
 
