@@ -16,6 +16,7 @@ function fallbackAction(fallback) {
 
 export default Ember.Component.extend({
   layout,
+  tagName: '',
   format: 'YYYY/MM/DD',
   onCenterChange: fallbackAction(function(day){
     this.set('center', day.date);
