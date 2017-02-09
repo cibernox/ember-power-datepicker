@@ -13,6 +13,8 @@ subcomponents can be omitted or replaced by your own.
 This addon is in active development so expect some churn.
 A changelog file will be maintained to surface what changed and when and ease updates.
 
+[Small demo](https://ember-datepicker.development.pagefrontapp.com/)
+
 ## Installation
 
 * `ember install ember-power-datepicker`
