@@ -1,25 +1,62 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import getOwner from 'ember-owner/get';
+import run from 'ember-runloop';
+import $ from 'jquery';
+import { clickTrigger } from '../../helpers/ember-basic-dropdown';
+import { assertionInjector, assertionCleanup } from '../../assertions';
 
-moduleForComponent('power-datepicker', 'Integration | Component | power datepicker', {
-  integration: true
+moduleForComponent('power-datepicker', 'Integration | Component | power-datepicker', {
+  integration: true,
+  beforeEach() {
+    assertionInjector(this);
+    let calendarService = getOwner(this).lookup('service:power-calendar');
+    calendarService.set('date', new Date(2013, 9, 18));
+  },
+
+  afterEach() {
+    assertionCleanup(this);
+  }
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{power-datepicker}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
+test('Can be open and closed clicking on the trigger', function(assert) {
+  assert.expect(5);
   this.render(hbs`
-    {{#power-datepicker}}
-      template block text
+    {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
+      {{#dp.trigger}}Click me{{/dp.trigger}}
+      {{#dp.content}}
+        {{dp.nav}}
+        {{dp.days}}
+      {{/dp.content}}
     {{/power-datepicker}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal($('.ember-basic-dropdown-content').length, 0, 'The datepicker is closed');
+  clickTrigger();
+  assert.equal($('.ember-basic-dropdown-content').length, 1, 'The datepicker is open');
+  assert.equal($('.ember-basic-dropdown-content .ember-power-calendar-nav').length, 1, 'It contains the nav');
+  assert.equal($('.ember-basic-dropdown-content .ember-power-calendar-days').length, 1, 'It contains the days');
+  clickTrigger();
+  assert.equal($('.ember-basic-dropdown-content').length, 0, 'The datepicker is closed again');
+});
+
+test('Clicking on a day invokes the `onSelect` action', function(assert) {
+  assert.expect(3);
+  this.onSelect = (day, datepicker, e) => {
+    assert.isDay(day, 'The first argument is a day');
+    assert.isDatepicker(datepicker, 'The second argument is the calendar\'s public API');
+    assert.ok(e instanceof Event, 'The third argument is an event');
+  }
+  this.render(hbs`
+    {{#power-datepicker selected=selected onSelect=onSelect as |dp|}}
+      {{#dp.trigger}}Click me{{/dp.trigger}}
+      {{#dp.content}}
+        {{dp.nav}}
+        {{dp.days}}
+      {{/dp.content}}
+    {{/power-datepicker}}
+  `);
+
+  clickTrigger();
+  run(() => $('.ember-power-calendar-day--current-month:contains(15)')[0].click());
 });
