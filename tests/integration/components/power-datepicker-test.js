@@ -60,3 +60,43 @@ test('Clicking on a day invokes the `onSelect` action', function(assert) {
   clickTrigger();
   run(() => $('.ember-power-calendar-day--current-month:contains(15)')[0].click());
 });
+
+test('Clicking on a day invokes selects it and closes the datepicker', function(assert) {
+  assert.expect(3);
+
+  this.render(hbs`
+    {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
+      {{#dp.trigger}}{{compute dp.helpers.format-date}}{{/dp.trigger}}
+      {{#dp.content}}
+        {{dp.nav}}
+        {{dp.days}}
+      {{/dp.content}}
+    {{/power-datepicker}}
+  `);
+
+  clickTrigger();
+  assert.equal($('.ember-basic-dropdown-content').length, 1, 'The datepicker is open');
+  run(() => $('.ember-power-calendar-day--current-month:contains(15)')[0].click());
+  assert.equal($('.ember-basic-dropdown-content').length, 0, 'The datepicker is closed again');
+  assert.equal(this.$('.ember-power-datepicker-trigger').text().trim(), '2013/10/15');
+});
+
+test('When passed `closeOnSelect=false` selecting a date doesn\'t close the datepicker', function(assert) {
+  assert.expect(3);
+
+  this.render(hbs`
+    {{#power-datepicker closeOnSelect=false selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
+      {{#dp.trigger}}{{compute dp.helpers.format-date}}{{/dp.trigger}}
+      {{#dp.content}}
+        {{dp.nav}}
+        {{dp.days}}
+      {{/dp.content}}
+    {{/power-datepicker}}
+  `);
+
+  clickTrigger();
+  assert.equal($('.ember-basic-dropdown-content').length, 1, 'The datepicker is open');
+  run(() => $('.ember-power-calendar-day--current-month:contains(15)')[0].click());
+  assert.equal($('.ember-basic-dropdown-content').length, 1, 'The datepicker is still opened');
+  assert.equal(this.$('.ember-power-datepicker-trigger').text().trim(), '2013/10/15');
+});
