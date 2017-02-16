@@ -1,7 +1,7 @@
 <h1>Helpers testing</h1>
 
 <div class="datepicker-select-1">
-  {{#power-datepicker selected=selected1 onSelect=(action (mut selected1) value="date") as |dp|}}
+  {{#power-datepicker selected=selected1 onSelect=(action (mut selected1) value="date") closeOnSelect=false as |dp|}}
     {{#dp.trigger}}
       <input type="text" readonly value={{compute dp.helpers.format-date}}>
     {{/dp.trigger}}
