@@ -1,7 +1,7 @@
 # ember-power-datepicker
 
 This addon it's the last member of the [Ember Power Project](http://www.ember-power-select.com/support-the-project) family and it
-combines [ember-basic-dropdown](www.ember-basic-dropdown.com) and [ember-power-calendar](www.ember-power-calendar.com) 
+combines [ember-basic-dropdown](http://www.ember-basic-dropdown.com) and [ember-power-calendar](http://www.ember-power-calendar.com) 
 into a single datepicker component that exposes the public APIs of both components as one.
 
 As the components this one is born from, it aims to be flexible and customizable so you can
