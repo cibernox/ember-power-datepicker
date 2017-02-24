@@ -1,17 +1,23 @@
 {
   "name": "ember-power-datepicker",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember",
+    "component",
+    "power",
+    "datepicker",
+    "calendar",
+    "dropdown"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Miguel Camba",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/cibernox/ember-power-datepicker",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
