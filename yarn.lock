@@ -1409,9 +1409,9 @@ ember-assign-helper@0.1.1:
   dependencies:
     ember-cli-babel "^5.1.7"
 
-ember-basic-dropdown@^0.24.5:
-  version "0.24.5"
-  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-0.24.5.tgz#3dc1c704749889f9caa8d6a8e19dd98c3c059928"
+ember-basic-dropdown@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-0.30.0.tgz#d078576df3702a3cbee5586cb8e0348331ec1111"
   dependencies:
     ember-cli-babel "^5.1.10"
     ember-cli-htmlbars "^1.1.1"
