@@ -1,3 +1,6 @@
+# 0.2.0
+- Update EBD, which contains a breaking change (hence the intermediate version bump)
+
 # 0.1.5
 - Update EBD again to fix broken tests.
 
