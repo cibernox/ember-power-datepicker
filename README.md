@@ -53,11 +53,11 @@ Let's see a basic example:
   {{/power-datepicker}}
 ```
 
-The `{{dp.trigger}}` and `{{dp.content}}` come from [ember-basic-dropdown](www.ember-basic-dropdown.com). 
+The `{{dp.trigger}}` and `{{dp.content}}` come from [ember-basic-dropdown](https://www.ember-basic-dropdown.com). 
 You can learn more about them here: https://www.ember-basic-dropdown.com/docs/how-to-use-it
 
 The `{{dp.nav}}` and `dp.days` components along with the `selected` and `onSelect` properties 
-come from [ember-power-calendar](www.ember-power-calendar.com).
+come from [ember-power-calendar](https://www.ember-power-calendar.com).
 You can learm more about them it here: http://www.ember-power-calendar.com/docs/action-handling
 
 The `selected` and `onSelect` are the only mandatory options. You can omit them, but if
