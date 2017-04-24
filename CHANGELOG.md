@@ -1,4 +1,11 @@
-- [INTERNAL] Use Babel 6 and update dependencies
+
+# 0.3.0
+- [INTERNAL] Update to babel 6 final
+- [ENHANCEMENT] Update to EBD 0.32, which no allows the datepicker to be inside elements
+  with scroll
+
+# 0.2.2
+- [INTERNAL] Use Babel 6 beta and update dependencies
 
 # 0.2.0
 - Update EBD, which contains a breaking change (hence the intermediate version bump)
