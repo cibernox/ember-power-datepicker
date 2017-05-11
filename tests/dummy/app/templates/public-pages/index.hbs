@@ -97,6 +97,26 @@
     {{/dp.content}}
   {{/power-datepicker}}
 
+  <h3>Instance Locale</h3>
+  <p>Locale can be changed as per
+    <a href="http://www.ember-power-calendar.com/docs/i18n">ember-power-calendar/i18n</a>.
+    However, for per-instance locale change, pass a value for locale property in power-datepicker.
+    Eg: locale="ru", the below datepicker is in Russian
+  </p>
+  {{#power-datepicker
+    selected=selected
+    locale="ru"
+    onSelect=(action (mut selected) value="date")
+    as |dp|}}
+    {{#dp.trigger tabindex="-1"}}
+      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+    {{/dp.trigger}}
+
+    {{#dp.content class="dropdown-menu demo-datepicker-medium"}}
+      {{dp.nav}}{{dp.days}}
+    {{/dp.content}}
+  {{/power-datepicker}}
+
   <h3>Customize \{{datepicker.nav}} with a block</h3>
   <p>Not implemented</p>
 
