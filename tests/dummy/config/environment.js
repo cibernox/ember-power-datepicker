@@ -7,7 +7,7 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     moment: {
-      includeLocales: ['ru']
+      includeLocales: true
     },
     EmberENV: {
       FEATURES: {

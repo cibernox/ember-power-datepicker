@@ -9,13 +9,6 @@ export default Ember.Controller.extend({
   twoWeeksFromNow: computed(function() {
     return moment().add(2, 'weeks');
   }),
-  init() {
-    this._super();
-
-    // loading a particular locale seems to set it as default across the app, so
-    // overriding english as default.
-    this.get('moment').setLocale('en');
-  },
   actions: {
     log() {
       // console.debug(...arguments);
