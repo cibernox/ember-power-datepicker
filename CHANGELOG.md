@@ -1,3 +1,5 @@
+# 0.4.0
+- [ENHANCEMENT] Update dependencies
 
 # 0.3.0
 - [INTERNAL] Update to babel 6 final
