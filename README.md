@@ -43,10 +43,10 @@ Let's see a basic example:
 ```hbs
   {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="form-control" readonly value={{moment-format selected}}>
+      <input type="text" class="my-input-class" readonly value={{moment-format selected}}>
     {{/dp.trigger}}
 
-    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
+    {{#dp.content class="demo-datepicker-small"}}
       {{dp.nav}}
       {{dp.days}}
     {{/dp.content}}
