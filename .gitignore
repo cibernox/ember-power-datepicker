@@ -18,6 +18,7 @@ yarn-error.log
 testem.log
 
 .env.deploy.*
+/.idea/
 # ember-try
 .node_modules.ember-try/
 bower.json.ember-try
