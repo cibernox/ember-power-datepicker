@@ -1,13 +1,10 @@
-import Test from 'ember-test';
-import { assert } from 'ember-metal/utils';
-import registerBasicDropdownHelpers from './ember-basic-dropdown';
-import registerPowerCalendarHelpers from './ember-power-calendar';
+import { registerAsyncHelper } from '@ember/test';
+import { assert } from '@ember/debug';
+import { clickTrigger } from 'ember-basic-dropdown/test-support/helpers';
+import { calendarSelect } from 'ember-power-calendar/test-support';
 
 export default function() {
-  registerBasicDropdownHelpers();
-  registerPowerCalendarHelpers();
-
-  Test.registerAsyncHelper('datepickerSelect', function(app, selector, selected) {
+  registerAsyncHelper('datepickerSelect', async function(app, selector, selected) {
     assert('`datepickerSelect` expect a Date or MomentJS object as second argument', selected);
     let $selector = find(selector);
     assert('`datepickerSelect` couln\'t find any element with selector: ' + selector, $selector.length);
@@ -20,10 +17,7 @@ export default function() {
       selector = `${selector} .ember-power-datepicker-trigger`;
     }
 
-    clickDropdown(selector);
-
-    andThen(function() {
-      calendarSelect('.ember-power-datepicker-content', selected);
-    });
+    await clickTrigger(selector);
+    await calendarSelect('.ember-power-datepicker-content', selected);
   });
 }

@@ -3,7 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 import getOwner from 'ember-owner/get';
 import run from 'ember-runloop';
 import $ from 'jquery';
-import { clickTrigger } from '../../helpers/ember-basic-dropdown';
+import { clickTrigger } from 'ember-basic-dropdown/test-support/helpers';
 import { assertionInjector, assertionCleanup } from '../../assertions';
 
 moduleForComponent('power-datepicker', 'Integration | Component | power-datepicker', {
