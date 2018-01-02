@@ -1,3 +1,6 @@
+# 0.5.0
+- [BREAKING] Depend on `ember-basic-dropdown` 1.0.0-beta. This means IE 10 is no longer tested.
+
 # 0.4.0
 - [ENHANCEMENT] Update dependencies
 
