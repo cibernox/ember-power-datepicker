@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-power-datepicker',
+  name: require('./package').name,
 
   contentFor(type, config) {
     let emberBasicDropdown = this.addons.find((a) => a.name === 'ember-basic-dropdown');
