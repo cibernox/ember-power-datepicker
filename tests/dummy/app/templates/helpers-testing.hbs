@@ -3,7 +3,7 @@
 <div class="datepicker-select-1">
   {{#power-datepicker selected=selected1 onSelect=(action (mut selected1) value="date") closeOnSelect=false as |dp|}}
     {{#dp.trigger}}
-      <input type="text" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" readonly value={{selected1}}>
     {{/dp.trigger}}
     {{#dp.content}}
       {{dp.nav}}

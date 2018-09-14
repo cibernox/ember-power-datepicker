@@ -72,24 +72,16 @@ which you can.
 
 ## Testing
 
-In testing it requires phantomjs 2.0+. This addon also provides a convenient 
-`datepickerSelect('selector', dateOrMoment)` test helper to interact with the component in 
-acceptance tests.
+This addon also provides a convenient 
+`datepickerSelect('selector', dateOrMoment)` test helper to interact with the component in tests.
 
-To import this helpers, import and invoke the function in your `/tests/helpers/start-app.js`
+Import this helpers in your tests like this:
 
 ```js
-import Ember from 'ember';
-import Application from '../../app';
-import config from '../../config/environment';
-import registerPowerDatepickerHelpers from '../../tests/helpers/ember-power-datepicker';
-
-registerPowerDatepickerHelpers();
-
-export default function startApp(attrs) {
-  //...
-}
+import { datepickerSelect } from 'ember-power-datepicker/test-support';
 ```
+
+
 
 ## Contributing
 

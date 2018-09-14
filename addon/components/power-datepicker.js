@@ -1,9 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/power-datepicker';
 import moment from 'moment';
 import { fallbackAction } from '../utils/computed-properties';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   closeOnSelect: true,
   tagName: '',
