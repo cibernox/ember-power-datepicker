@@ -1,6 +1,5 @@
 import Component from '@ember/component';
 import layout from '../templates/components/power-datepicker';
-import moment from 'moment';
 import { fallbackAction } from '../utils/computed-properties';
 
 export default Component.extend({
@@ -21,13 +20,6 @@ export default Component.extend({
         return;
       }
       datepicker.actions.close();
-    }
-  },
-
-  // Helpers
-  formatDate(selected, format) {
-    if (selected) {
-      return moment(selected).format(format);
     }
   }
 });
