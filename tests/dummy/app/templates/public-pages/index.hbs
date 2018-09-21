@@ -7,7 +7,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1" class="foobar-yo"}}
-      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" class="form-control" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="dropdown-menu demo-datepicker-small"}}
@@ -21,7 +21,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" class="form-control" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="dropdown-menu demo-datepicker-medium"}}
@@ -35,7 +35,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" class="form-control" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="dropdown-menu demo-datepicker-small bootstrap-datepicker-theme"}}
@@ -51,7 +51,7 @@
     as |dp|}}
 
     <div class="md-datepicker-input-container">
-      <input type="text" class="md-datepicker-input" readonly value={{compute dp.helpers.format-date}} data-ebd-id="{{dp.uniqueId}}-trigger">
+      <input type="text" class="md-datepicker-input" readonly value={{selected}} data-ebd-id="{{dp.uniqueId}}-trigger">
       <button onclick={{dp.actions.open}}
         aria-controls="ember-basic-dropdown-content-{{dp.uniqueId}}"
         class="md-datepicker-triangle-button md-icon-button md-button">
@@ -72,7 +72,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" class="form-control" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="dropdown-menu demo-datepicker-small"}}
@@ -88,7 +88,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" class="form-control" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="dropdown-menu demo-datepicker-small"}}
@@ -109,7 +109,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="form-control" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" class="form-control" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="dropdown-menu demo-datepicker-medium"}}

@@ -18,7 +18,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="demo-datepicker-bootstrap demo-datepicker-small"}}
@@ -32,7 +32,7 @@
     onSelect=(action (mut selected) value="date")
     as |dp|}}
     {{#dp.trigger tabindex="-1"}}
-      <input type="text" readonly value={{compute dp.helpers.format-date}}>
+      <input type="text" readonly value={{selected}}>
     {{/dp.trigger}}
 
     {{#dp.content class="demo-datepicker-bootstrap demo-datepicker-medium"}}

@@ -1,19 +1,18 @@
-import { test } from 'qunit';
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
+import { visit } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { setupApplicationTest } from 'ember-qunit';
+import { datepickerSelect } from 'ember-power-datepicker/test-support';
 
-moduleForAcceptance('Acceptance | helpers | datepickerSelect');
+module('Acceptance | helpers | datepickerSelect', function(hooks) {
+  setupApplicationTest(hooks);
 
-test('`datepickerSelect` selects the given date', function(assert) {
-  visit('/helpers-testing');
+  test('`datepickerSelect` selects the given date', async function(assert) {
+    await visit('/helpers-testing');
 
-  andThen(function() {
-    datepickerSelect('.datepicker-select-1', new Date(2013, 8, 3));
-  });
-
-  andThen(function() {
-    assert.equal(find('.ember-power-calendar-nav-title').text().trim(), 'September 2013', 'The nav component has updated');
-    assert.equal(find('[data-date=2013-09-01]').length, 1, 'The days component has updated');
-    assert.ok(find('[data-date=2013-09-03]').hasClass('ember-power-calendar-day--selected'), 'The 3rd of september is selected');
-    assert.equal(find('.datepicker-select-1 input').val(), '2013/09/03', 'The input has updated');
+    await datepickerSelect('.datepicker-select-1', new Date(2013, 8, 3));
+    assert.dom('.ember-power-calendar-nav-title').hasText('September 2013', 'The nav component has updated');
+    assert.dom('[data-date="2013-09-01"]').exists({ count: 1 }, 'The days component has updated');
+    assert.dom('[data-date="2013-09-03"]').hasClass('ember-power-calendar-day--selected', 'The 3rd of september is selected');
+    assert.dom('.datepicker-select-1 input').hasValue(/Sep 03 2013/, 'The input has updated');
   });
 });

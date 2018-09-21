@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
 import moment from 'moment';
-const { computed } = Ember;
-export default Ember.Controller.extend({
+export default Controller.extend({
   twoDaysAgo: computed(function() {
     return moment().add(-2, 'days');
   }),
