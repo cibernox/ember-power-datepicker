@@ -31,7 +31,7 @@
     "ember-cli-babel": "^7.1.2",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-native-dom-helpers": "^0.5.10",
-    "ember-power-calendar": "^0.12.0"
+    "ember-power-calendar": "^0.13.3"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
