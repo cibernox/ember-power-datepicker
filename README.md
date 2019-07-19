@@ -1,7 +1,7 @@
 # ember-power-datepicker
 
 This addon it's the last member of the [Ember Power Project](http://www.ember-power-select.com/support-the-project) family and it
-combines [ember-basic-dropdown](http://www.ember-basic-dropdown.com) and [ember-power-calendar](http://www.ember-power-calendar.com) 
+combines [ember-basic-dropdown](http://www.ember-basic-dropdown.com) and [ember-power-calendar](http://www.ember-power-calendar.com)
 into a single datepicker component that exposes the public APIs of both components as one.
 
 As the components this one is born from, it aims to be flexible and customizable so you can
@@ -29,7 +29,7 @@ If you are using sass, you can import the styles in your app.scss
 This component [doesn't has any style of itself](https://github.com/cibernox/ember-power-datepicker/blob/master/app/styles/ember-power-datepicker.scss), so the only thing this import is doing is
 in turn importing the styles of **ember-basic-dropdown** and **ember-power-calendar**, so
 this is just a convenience.
-If you already use and import the styles of those addons yourself, you don't have to 
+If you already use and import the styles of those addons yourself, you don't have to
 import these.
 
 ## Usage
@@ -53,10 +53,10 @@ Let's see a basic example:
   {{/power-datepicker}}
 ```
 
-The `{{dp.trigger}}` and `{{dp.content}}` come from [ember-basic-dropdown](https://www.ember-basic-dropdown.com). 
+The `{{dp.trigger}}` and `{{dp.content}}` come from [ember-basic-dropdown](https://www.ember-basic-dropdown.com).
 You can learn more about them here: https://www.ember-basic-dropdown.com/docs/how-to-use-it
 
-The `{{dp.nav}}` and `dp.days` components along with the `selected` and `onSelect` properties 
+The `{{dp.nav}}` and `dp.days` components along with the `selected` and `onSelect` properties
 come from [ember-power-calendar](https://www.ember-power-calendar.com).
 You can learm more about them it here: http://www.ember-power-calendar.com/docs/action-handling
 
@@ -72,7 +72,7 @@ which you can.
 
 ## Testing
 
-This addon also provides a convenient 
+This addon also provides a convenient
 `datepickerSelect('selector', dateOrMoment)` test helper to interact with the component in tests.
 
 Import this helpers in your tests like this:
@@ -85,5 +85,5 @@ import { datepickerSelect } from 'ember-power-datepicker/test-support';
 
 ## Contributing
 
-Contributions are welcomes. However if your contribution involves adding a new feature, 
+Contributions are welcomes. However if your contribution involves adding a new feature,
 please open an issue before to share your idea and agree the details of the feature before starting implementing it.
