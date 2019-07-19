@@ -2,100 +2,96 @@
   <h3>Basic usage: Minimal options</h3>
 
   <h4>Small</h4>
-  {{#power-datepicker
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1" class="foobar-yo"}}
+  <PowerDatepicker
+    @selected={{selected}}
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    <dp.Trigger tabindex="-1" class="foobar-yo">
       <input type="text" class="form-control" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
-      {{dp.nav}}{{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="dropdown-menu demo-datepicker-small">
+      <dp.Nav />
+      <dp.Days />
+    </dp.Content>
+  </PowerDatepicker>
 
   <h4>Medium</h4>
-  {{#power-datepicker
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+  <PowerDatepicker
+    @selected={{selected}}
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    <dp.Trigger tabindex="-1">
       <input type="text" class="form-control" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="dropdown-menu demo-datepicker-medium"}}
-      {{dp.nav}}{{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="dropdown-menu demo-datepicker-medium">
+      <dp.Nav />
+      <dp.Days />
+    </dp.Content>
+  </PowerDatepicker>
 
   <h3>Bootstrap-datepicker like theme</h3>
-  {{#power-datepicker
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+  <PowerDatepicker
+    @selected={{selected}}
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    <dp.Trigger tabindex="-1">
       <input type="text" class="form-control" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="dropdown-menu demo-datepicker-small bootstrap-datepicker-theme"}}
-      {{dp.nav}}{{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="dropdown-menu demo-datepicker-small bootstrap-datepicker-theme">
+      <dp.Nav />
+      <dp.Days />
+    </dp.Content>
+  </PowerDatepicker>
 
   <h3>Material-datepicker like theme</h3>
-  {{#power-datepicker
-    onOpen=(action 'log')
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
+  <PowerDatepicker
+    @onOpen={{action 'log'}}
+    @selected={{selected}}
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
 
     <div class="md-datepicker-input-container">
       <input type="text" class="md-datepicker-input" readonly value={{selected}} data-ebd-id="{{dp.uniqueId}}-trigger">
-      <button onclick={{dp.actions.open}}
+      <button {{on "click" dp.actions.open}}
         aria-controls="ember-basic-dropdown-content-{{dp.uniqueId}}"
         class="md-datepicker-triangle-button md-icon-button md-button">
         <div class="md-datepicker-expand-triangle"></div>
       </button>
     </div>
 
-
-    {{#dp.content class="material-datepicker-theme"}}
-      {{dp.nav}}
-      {{dp.days weekdayFormat="min"}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="material-datepicker-theme">
+      <dp.Nav/>
+      <dp.Days @weekdayFormat="min"/>
+    </dp.Content>
+  </PowerDatepicker>
 
   <h3>Min date</h3>
-  {{#power-datepicker
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+  <PowerDatepicker
+    @selected={{selected}}
+    @onSelect={{{action (mut selected) value="date"}}} as |dp|>
+    <dp.Trigger tabindex="-1">
       <input type="text" class="form-control" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
-      {{dp.nav}}
-      {{dp.days minDate=twoDaysAgo}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="dropdown-menu demo-datepicker-small">
+      <dp.Nav />
+      <dp.Days @minDate={{this.twoDaysAgo}} />
+    </dp.Content>
+  </PowerDatepicker>
 
 
   <h3>Max date</h3>
-  {{#power-datepicker
+  <PowerDatepicker
     selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+    onSelect=(action (mut selected) value="date") as |dp|>
+    <dp.Trigger tabindex="-1">
       <input type="text" class="form-control" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="dropdown-menu demo-datepicker-small"}}
-      {{dp.nav}}
-      {{dp.days maxDate=twoWeeksFromNow}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="dropdown-menu demo-datepicker-small">
+      <dp.Nav />
+      <dp.Days @maxDate={{this.twoWeeksFromNow}} />
+    </dp.Content>
+  </PowerDatepicker>
 
   <h3>Instance Locale</h3>
   <p>Locale can be changed as per
@@ -103,19 +99,19 @@
     However, for per-instance locale change, pass a value for locale property in power-datepicker.
     Eg: locale="ru", the below datepicker is in Russian
   </p>
-  {{#power-datepicker
-    selected=selected
-    locale="ru"
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+  <PowerDatepicker
+    @selected={{selected}}
+    @locale="ru"
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    <dp.Trigger tabindex="-1">
       <input type="text" class="form-control" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="dropdown-menu demo-datepicker-medium"}}
-      {{dp.nav}}{{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="dropdown-menu demo-datepicker-medium">
+      <dp.Nav />
+      <dp.Days />
+    </dp.Content>
+  </PowerDatepicker>
 
   <h3>Customize \{{datepicker.nav}} with a block</h3>
   <p>Not implemented</p>

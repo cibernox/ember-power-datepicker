@@ -13,22 +13,16 @@
   </ul>
 
   <h4>Small</h4>
-  <BasicDropdown as |dd|>
-    <dd.Trigger>HEY</dd.Trigger>
-    <dd.Content>ho! lets go</dd.Content>
-  </BasicDropdown>
   <PowerDatepicker
     @selected={{selected}}
     @onSelect={{action (mut selected) value="date"}} as |dp|>
     <dp.Trigger tabindex="-1">
-      el trigger
       <input type="text" readonly value={{selected}}>
     </dp.Trigger>
 
     <dp.Content class="demo-datepicker-bootstrap demo-datepicker-small">
-      El content
-      {{!-- <dp.Nav />
-      <dp.Days /> --}}
+      <dp.Nav />
+      <dp.Days />
     </dp.Content>
   </PowerDatepicker>
 
