@@ -13,32 +13,38 @@
   </ul>
 
   <h4>Small</h4>
-  {{#power-datepicker
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+  <BasicDropdown as |dd|>
+    <dd.Trigger>HEY</dd.Trigger>
+    <dd.Content>ho! lets go</dd.Content>
+  </BasicDropdown>
+  <PowerDatepicker
+    @selected={{selected}}
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    <dp.Trigger tabindex="-1">
+      el trigger
       <input type="text" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="demo-datepicker-bootstrap demo-datepicker-small"}}
-      {{dp.nav}}{{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="demo-datepicker-bootstrap demo-datepicker-small">
+      El content
+      {{!-- <dp.Nav />
+      <dp.Days /> --}}
+    </dp.Content>
+  </PowerDatepicker>
 
   <h4>Medium</h4>
-  {{#power-datepicker
-    selected=selected
-    onSelect=(action (mut selected) value="date")
-    as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
+  <PowerDatepicker
+    @selected={{selected}}
+    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    <dp.Trigger tabindex="-1">
       <input type="text" readonly value={{selected}}>
-    {{/dp.trigger}}
+    </dp.Trigger>
 
-    {{#dp.content class="demo-datepicker-bootstrap demo-datepicker-medium"}}
-      {{dp.nav}}{{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    <dp.Content class="demo-datepicker-bootstrap demo-datepicker-medium">
+      <dp.Nav />
+      <dp.Days />
+    </dp.Content>
+  </PowerDatepicker>
 </section>
 
 

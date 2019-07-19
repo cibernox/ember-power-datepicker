@@ -4,8 +4,8 @@ import { fallbackAction } from '../utils/computed-properties';
 
 export default Component.extend({
   layout,
-  closeOnSelect: true,
   tagName: '',
+  closeOnSelect: true,
   format: 'YYYY/MM/DD',
   onCenterChange: fallbackAction(function(day){
     this.set('center', day.date);

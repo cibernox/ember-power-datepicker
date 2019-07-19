@@ -1,4 +1,53 @@
-{{#basic-dropdown
+<BasicDropdown
+  @disabled={{@disabled}}
+  @onOpen={{@onOpen}}
+  @onClose={{@onClose}}
+  @onFocus={{@onFocus}}
+  @destination={{@destination}}
+  @initiallyOpened={{@initiallyOpened}}
+  @horizontalPosition={{@horizontalPosition}}
+  @calculatePosition={{@calculatePosition}}
+  @verticalPosition={{@verticalPosition}}
+  @renderInPlace={{@renderInPlace}}
+  ...attributes as |dd|>
+  dentro
+  {{yield dd}}
+  {{!-- <PowerCalendar
+    @htmlTag=""
+    @center={{@center}}
+    @locale={{@locale}}
+    @onCenterChange={{@onCenterChange}}
+    @onSelect={{action 'onSelect'}}
+    @selected={{@selected}} as |cal|>
+
+    {{#with (hash
+        uniqueId=dd.uniqueId
+        calendarUniqueId=cal.uniqueId
+        isOpen=dd.isOpen
+        disabled=dd.disabled
+
+        selected=cal.selected
+        loading=cal.loading
+        center=cal.center
+        locale=cal.locale
+
+        actions=(assign dd.actions cal.actions)
+      ) as |datepicker|}}
+
+      {{yield (assign
+        datepicker
+        (hash
+          Trigger=(component dd.trigger dropdown=datepicker classNames="ember-power-datepicker-trigger")
+          Content=(component dd.content dropdown=datepicker defaultClass="ember-power-datepicker-content")
+          Nav=(component cal.nav calendar=datepicker)
+          Days=(component cal.days calendar=datepicker data-power-calendar-id=datepicker.calendarUniqueId)
+        )
+      )}}
+    {{/with}}
+  </PowerCalendar> --}}
+</BasicDropdown>
+
+{{!-- {{#basic-dropdown
   disabled=disabled
   onOpen=onOpen
   onClose=onClose
@@ -42,4 +91,4 @@
       )}}
     {{/with}}
   {{/power-calendar}}
-{{/basic-dropdown}}
+{{/basic-dropdown}} --}}
