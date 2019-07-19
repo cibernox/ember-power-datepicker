@@ -24,13 +24,13 @@ module('Integration | Component | power-datepicker', function(hooks) {
   test('Can be open and closed clicking on the trigger', async function(assert) {
     assert.expect(5);
     await render(hbs`
-      {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
-        {{#dp.trigger}}Click me{{/dp.trigger}}
-        {{#dp.content}}
-          {{dp.nav}}
-          {{dp.days}}
-        {{/dp.content}}
-      {{/power-datepicker}}
+      <PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
+        <dp.Trigger>Click me</dp.Trigger>
+        <dp.Content>
+          <dp.Nav />
+          <dp.Days />
+        </dp.Content>
+      </PowerDatepicker>
     `);
 
     assert.dom('.ember-basic-dropdown-content').doesNotExist('The datepicker is closed');
@@ -50,13 +50,13 @@ module('Integration | Component | power-datepicker', function(hooks) {
       assert.ok(e instanceof Event, 'The third argument is an event');
     });
     await render(hbs`
-      {{#power-datepicker selected=selected onSelect=onSelect as |dp|}}
-        {{#dp.trigger}}Click me{{/dp.trigger}}
-        {{#dp.content}}
-          {{dp.nav}}
-          {{dp.days}}
-        {{/dp.content}}
-      {{/power-datepicker}}
+      <PowerDatepicker @selected={{selected}} @onSelect={{onSelect}} as |dp|>
+        <dp.Trigger>Click me</dp.Trigger>
+        <dp.Content>
+          <dp.Nav />
+          <dp.Days />
+        </dp.Content>
+      </PowerDatepicker>
     `);
 
     await clickTrigger();
@@ -68,13 +68,13 @@ module('Integration | Component | power-datepicker', function(hooks) {
     assert.expect(3);
 
     await render(hbs`
-      {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
-        {{#dp.trigger}}{{selected}}{{/dp.trigger}}
-        {{#dp.content}}
-          {{dp.nav}}
-          {{dp.days}}
-        {{/dp.content}}
-      {{/power-datepicker}}
+      <PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
+        <dp.Trigger>{{selected}}</dp.Trigger>
+        <dp.Content>
+          <dp.Nav />
+          <dp.Days />
+        </dp.Content>
+      </PowerDatepicker>
     `);
 
     await clickTrigger();
@@ -89,13 +89,13 @@ module('Integration | Component | power-datepicker', function(hooks) {
     assert.expect(3);
 
     await render(hbs`
-      {{#power-datepicker closeOnSelect=false selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
-        {{#dp.trigger}}{{selected}}{{/dp.trigger}}
-        {{#dp.content}}
-          {{dp.nav}}
-          {{dp.days}}
-        {{/dp.content}}
-      {{/power-datepicker}}
+      <PowerDatepicker @closeOnSelect={{false}} @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
+        <dp.Trigger>{{selected}}</dp.Trigger>
+        <dp.Content>
+          <dp.Nav />
+          <dp.Days />
+        </dp.Content>
+      </PowerDatepicker>
     `);
 
     await clickTrigger();

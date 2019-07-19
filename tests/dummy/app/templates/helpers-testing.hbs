@@ -1,13 +1,13 @@
 <h1>Helpers testing</h1>
 
 <div class="datepicker-select-1">
-  {{#power-datepicker selected=selected1 onSelect=(action (mut selected1) value="date") closeOnSelect=false as |dp|}}
-    {{#dp.trigger}}
+  <PowerDatepicker @selected={{selected1}} @onSelect={{action (mut selected1) value="date"}} @closeOnSelect={{false}} as |dp|>
+    <dp.Trigger>
       <input type="text" readonly value={{selected1}}>
-    {{/dp.trigger}}
-    {{#dp.content}}
-      {{dp.nav}}
-      {{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+    </dp.Trigger>
+    <dp.Content>
+      <dp.Nav />
+      <dp.Days />
+    </dp.Content>
+  </PowerDatepicker>
 </div>
