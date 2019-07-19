@@ -3240,10 +3240,10 @@ ember-assign-polyfill@^2.6.0:
     ember-cli-babel "^6.16.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-basic-dropdown@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-2.0.2.tgz#22e4e5f5b0f0cb4decbcdb3b74f85bbfc08630e0"
-  integrity sha512-jlbFiHaO34TEcI7YkSxDPVmQGYKqGpMdgkvKXMSvyJfWEnUH+cPS0npsXjrGhr/ZBrra4USPqExpjIKPTrSySw==
+ember-basic-dropdown@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-2.0.4.tgz#4ce91b038202ce5336fde3a83970d942bc419541"
+  integrity sha512-J8XwVx+6xrgZ+RvN2yi5hClrGWSFGJRQvEOWGhnMZo99Thk2S8UEmHdmRTCiq2+Q6oMRu8BDBNANVuRLtWHarw==
   dependencies:
     "@ember-decorators/component" "^6.0.0"
     "@ember/render-modifiers" "^1.0.0"
