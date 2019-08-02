@@ -1,3 +1,7 @@
+# 0.7.0
+- [BREAKING] Update to octane. This updates ember-basic-dropdown and ember-power-calendar to the latest
+  versions.
+
 # 0.6.0
 - [CHORE] Update all dependencies, include ember-basic-dropdown and ember-power-calendar.
 
