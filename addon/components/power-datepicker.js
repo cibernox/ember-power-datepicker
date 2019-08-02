@@ -1,8 +1,8 @@
 import Component from '@ember/component';
+import { layout, tagName } from "@ember-decorators/component";
 import { action } from '@ember/object';
-import layout from '../templates/components/power-datepicker';
+import templateLayout from "../templates/components/power-datepicker";
 import { fallbackAction } from '../utils/computed-properties';
-import { templateLayout, tagName } from "@ember-decorators/component";
 
 export default @layout(templateLayout) @tagName('') class extends Component {
   closeOnSelect = true
@@ -13,7 +13,7 @@ export default @layout(templateLayout) @tagName('') class extends Component {
 
   // Actions
   @action
-  onSelect(day, datepicker, e) {
+  handleSelect(day, datepicker, e) {
     let { onSelect, closeOnSelect } = this.getProperties('onSelect', 'closeOnSelect');
     let value = onSelect(day, datepicker, e);
     if (value === false || !closeOnSelect) {
