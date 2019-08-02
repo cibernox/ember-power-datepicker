@@ -1,45 +1,44 @@
-{{#basic-dropdown
-  disabled=disabled
-  onOpen=onOpen
-  onClose=onClose
-  onFocus=onFocus
-  destination=destination
-  initiallyOpened=initiallyOpened
-  horizontalPosition=horizontalPosition
-  calculatePosition=calculatePosition
-  verticalPosition=verticalPosition
-  renderInPlace=renderInPlace
-  as |dd|}}
-  {{#power-calendar
-    tagName=''
-    center=center
-    locale=locale
-    onCenterChange=onCenterChange
-    onSelect=(action 'onSelect')
-    selected=selected as |cal|}}
-
+<BasicDropdown
+  @disabled={{@disabled}}
+  @onOpen={{@onOpen}}
+  @onClose={{@onClose}}
+  @onFocus={{@onFocus}}
+  @destination={{@destination}}
+  @initiallyOpened={{@initiallyOpened}}
+  @horizontalPosition={{@horizontalPosition}}
+  @calculatePosition={{@calculatePosition}}
+  @verticalPosition={{@verticalPosition}}
+  @renderInPlace={{@renderInPlace}}
+  ...attributes as |dd|>
+  <PowerCalendar
+    @htmlTag=""
+    @center={{this.center}}
+    @locale={{@locale}}
+    @onCenterChange={{this.onCenterChange}}
+    @onSelect={{this.handleSelect}}
+    @selected={{@selected}} as |cal|>
     {{#with (hash
-      uniqueId=dd.uniqueId
-      calendarUniqueId=cal.uniqueId
-      isOpen=dd.isOpen
-      disabled=dd.disabled
+        uniqueId=dd.uniqueId
+        calendarUniqueId=cal.uniqueId
+        isOpen=dd.isOpen
+        disabled=dd.disabled
 
-      selected=cal.selected
-      loading=cal.loading
-      center=cal.center
-      locale=cal.locale
+        selected=cal.selected
+        loading=cal.loading
+        center=cal.center
+        locale=cal.locale
 
-      actions=(assign dd.actions cal.actions)
-    ) as |datepicker|}}
+        actions=(assign dd.actions cal.actions)
+      ) as |datepicker|}}
       {{yield (assign
         datepicker
         (hash
-          trigger=(component dd.trigger dropdown=datepicker classNames="ember-power-datepicker-trigger")
-          content=(component dd.content dropdown=datepicker defaultClass="ember-power-datepicker-content")
-          nav=(component cal.nav calendar=datepicker)
-          days=(component cal.days calendar=datepicker data-power-calendar-id=datepicker.calendarUniqueId)
+          Trigger=(component dd.Trigger dropdown=datepicker defaultClass="ember-power-datepicker-trigger")
+          Content=(component dd.Content dropdown=datepicker defaultClass="ember-power-datepicker-content")
+          Nav=(component cal.Nav calendar=datepicker)
+          Days=(component cal.Days calendar=datepicker)
         )
       )}}
     {{/with}}
-  {{/power-calendar}}
-{{/basic-dropdown}}
+  </PowerCalendar>
+</BasicDropdown>

@@ -41,16 +41,16 @@ are accepted by this addon.
 Let's see a basic example:
 
 ```hbs
-  {{#power-datepicker selected=selected onSelect=(action (mut selected) value="date") as |dp|}}
-    {{#dp.trigger tabindex="-1"}}
-      <input type="text" class="my-input-class" readonly value={{moment-format selected}}>
-    {{/dp.trigger}}
+<PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
+  <dp.Trigger tabindex="-1">
+    <input type="text" class="my-input-class" readonly value={{moment-format selected}}>
+  </dp.Trigger>
 
-    {{#dp.content class="demo-datepicker-small"}}
-      {{dp.nav}}
-      {{dp.days}}
-    {{/dp.content}}
-  {{/power-datepicker}}
+  <dp.Content class="demo-datepicker-small">
+    <dp.Nav />
+    <dp.Days />
+  </dp.Content>
+</PowerDatepicker>
 ```
 
 The `{{dp.trigger}}` and `{{dp.content}}` come from [ember-basic-dropdown](https://www.ember-basic-dropdown.com).
