@@ -3688,10 +3688,10 @@ ember-power-calendar-moment@^0.1.7:
     ember-cli-babel "^7.7.3"
     ember-cli-moment-shim "^3.7.1"
 
-ember-power-calendar@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.14.0.tgz#a7e68b896b43eeeb143c51f6c5ea07cdd473038f"
-  integrity sha512-4b+fiYIg1I1cKDlGrC6ASmIj5eUVdxtflb8MYckRjHztf6hCL4vBg80Ou97h8gPkncM5PXOA5OJ1mkPVWh19wg==
+ember-power-calendar@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.14.1.tgz#b7a487f1efe9128ae079e4384d01bf734d2bc559"
+  integrity sha512-QeGdYE1QbLYOtcdOcahc8Omf9YV8O4Wz8qIsJ4gVh9HzJlu/iZS6jjlv3BwsV3Y5ar9z8k4qEu+LEvmwuOm4/w==
   dependencies:
     "@ember-decorators/component" "^6.0.0"
     ember-assign-helper "^0.2.0"
@@ -3699,6 +3699,7 @@ ember-power-calendar@^0.14.0:
     ember-cli-element-closest-polyfill "^0.0.1"
     ember-cli-htmlbars "^3.1.0"
     ember-concurrency "^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0"
+    ember-truth-helpers "^2.1.0"
 
 ember-qunit@^4.4.1:
   version "4.4.1"

@@ -30,14 +30,13 @@
 
         actions=(assign dd.actions cal.actions)
       ) as |datepicker|}}
-
       {{yield (assign
         datepicker
         (hash
           Trigger=(component dd.Trigger dropdown=datepicker defaultClass="ember-power-datepicker-trigger")
           Content=(component dd.Content dropdown=datepicker defaultClass="ember-power-datepicker-content")
           Nav=(component cal.Nav calendar=datepicker)
-          Days=(component cal.Days calendar=datepicker data-power-calendar-id=datepicker.calendarUniqueId)
+          Days=(component cal.Days calendar=datepicker)
         )
       )}}
     {{/with}}
