@@ -12,9 +12,9 @@
   ...attributes as |dd|>
   <PowerCalendar
     @htmlTag=""
-    @center={{@center}}
+    @center={{this.center}}
     @locale={{@locale}}
-    @onCenterChange={{@onCenterChange}}
+    @onCenterChange={{this.onCenterChange}}
     @onSelect={{action 'onSelect'}}
     @selected={{@selected}} as |cal|>
     {{#with (hash
