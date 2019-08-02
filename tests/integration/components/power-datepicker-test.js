@@ -105,4 +105,21 @@ module('Integration | Component | power-datepicker', function(hooks) {
     assert.dom('.ember-basic-dropdown-content').exists({ count: 1 }, 'The datepicker is still opened');
     assert.dom('.ember-power-datepicker-trigger').hasText(/Oct 15 2013/);
   });
+
+  test('it honors `@matchTriggerWidth`', async function(assert) {
+    assert.expect(1);
+    await render(hbs`
+      <PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} @matchTriggerWidth={{true}} as |dp|>
+        <dp.Trigger style="float: left;min-width: 600px">
+          Click me!
+        </dp.Trigger>
+        <dp.Content>
+          <dp.Nav />
+          <dp.Days />
+        </dp.Content>
+      </PowerDatepicker>
+    `);
+    await clickTrigger();
+    assert.dom('.ember-power-datepicker-content').hasStyle({ width: '300px' }); // 600px / 2 because of the 0.5 zoom of the container
+  });
 });

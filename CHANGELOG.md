@@ -1,3 +1,6 @@
+# 0.7.1
+- [ENHANCE] Forward `@matchTriggerWidth` to the inner `<BasicDropdown>`
+
 # 0.7.0
 - [BREAKING] Update to octane. This updates ember-basic-dropdown and ember-power-calendar to the latest
   versions.
