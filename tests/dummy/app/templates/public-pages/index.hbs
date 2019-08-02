@@ -45,7 +45,7 @@
 
   <h3>Material-datepicker like theme</h3>
   <PowerDatepicker
-    @onOpen={{action 'log'}}
+    @onOpen={{this.log}}
     @selected={{selected}}
     @onSelect={{action (mut selected) value="date"}} as |dp|>
 
