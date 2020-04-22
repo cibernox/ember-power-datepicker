@@ -80,10 +80,3 @@ Import this helpers in your tests like this:
 ```js
 import { datepickerSelect } from 'ember-power-datepicker/test-support';
 ```
-
-
-
-## Contributing
-
-Contributions are welcomes. However if your contribution involves adding a new feature,
-please open an issue before to share your idea and agree the details of the feature before starting implementing it.
