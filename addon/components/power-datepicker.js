@@ -1,7 +1,7 @@
 import Component from '@ember/component';
-import { layout, tagName } from "@ember-decorators/component";
+import { layout, tagName } from '@ember-decorators/component';
 import { action } from '@ember/object';
-import templateLayout from "../templates/components/power-datepicker";
+import templateLayout from '../templates/components/power-datepicker';
 import { fallbackAction } from '../utils/computed-properties';
 
 export default @layout(templateLayout) @tagName('') class extends Component {
