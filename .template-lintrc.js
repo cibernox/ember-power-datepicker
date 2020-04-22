@@ -1,5 +1,9 @@
 'use strict';
 
+const pending = [
+];
+
 module.exports = {
-  extends: 'octane'
+  extends: 'octane',
+  pending
 };
