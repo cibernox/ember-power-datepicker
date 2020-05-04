@@ -14,10 +14,10 @@
 
   <h4>Small</h4>
   <PowerDatepicker
-    @selected={{selected}}
-    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    @selected={{this.selected}}
+    @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
-      <input type="text" readonly value={{selected}}>
+      <input type="text" readonly value={{this.selected}}>
     </dp.Trigger>
 
     <dp.Content class="demo-datepicker-bootstrap demo-datepicker-small">
@@ -28,10 +28,10 @@
 
   <h4>Medium</h4>
   <PowerDatepicker
-    @selected={{selected}}
-    @onSelect={{action (mut selected) value="date"}} as |dp|>
+    @selected={{this.selected}}
+    @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
-      <input type="text" readonly value={{selected}}>
+      <input type="text" readonly value={{this.selected}}>
     </dp.Trigger>
 
     <dp.Content class="demo-datepicker-bootstrap demo-datepicker-medium">
