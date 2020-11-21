@@ -1,3 +1,8 @@
+# 0.8.1
+- [ENHANCE] Relax dependency on ember-truth-helpers.
+# 0.8.0
+
+
 # 0.7.1
 - [ENHANCE] Forward `@matchTriggerWidth` to the inner `<BasicDropdown>`
 
