@@ -3,22 +3,16 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, click, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { clickTrigger } from 'ember-basic-dropdown/test-support/helpers';
-import {
-  assertionInjector,
-  assertionCleanup
-} from '../../assertions';
+import setupCustomAssertions from 'ember-cli-custom-assertions/test-support';
 
 module('Integration | Component | power-datepicker', function(hooks) {
   setupRenderingTest(hooks);
 
+  setupCustomAssertions(hooks);
+
   hooks.beforeEach(function() {
-    assertionInjector(this);
     let calendarService = this.owner.lookup('service:power-calendar');
     calendarService.set('date', new Date(2013, 9, 18));
-  });
-
-  hooks.afterEach(function() {
-    assertionCleanup(this);
   });
 
   test('Can be open and closed clicking on the trigger', async function(assert) {
