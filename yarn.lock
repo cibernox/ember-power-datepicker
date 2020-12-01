@@ -5943,13 +5943,13 @@ ember-basic-dropdown@^3.0.11:
     ember-maybe-in-element "^2.0.1"
     ember-truth-helpers "^2.1.0 || ^3.0.0"
 
-ember-cli-app-version@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-app-version/-/ember-cli-app-version-2.1.0.tgz#149101d4fd0d97875e12ec5e61ff105f508e5e2d"
-  integrity sha1-FJEB1P0Nl4deEuxeYf8QX1COXi0=
+ember-cli-app-version@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-app-version/-/ember-cli-app-version-4.0.0.tgz#033057ec5fe4d3ecdf5ac5380d442e2dc9f7526a"
+  integrity sha512-YRH1r4vjA9ZIgTVJ38zWxhtt4SCzIHb0ppEsO/z+JV0ZTQlS3+2dT5RhJWz7O3dyw5FWnlIng+gPRoQEz1umHA==
   dependencies:
-    ember-cli-babel "^6.8.0"
-    git-repo-version "0.4.1"
+    ember-cli-babel "^7.22.1"
+    git-repo-info "^2.1.1"
 
 ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.0:
   version "1.1.0"
@@ -5961,7 +5961,7 @@ ember-cli-babel-plugin-helpers@^1.1.1:
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.1.tgz#5016b80cdef37036c4282eef2d863e1d73576879"
   integrity sha512-sKvOiPNHr5F/60NLd7SFzMpYPte/nnGkq/tMIfXejfKHIhaiIkYFqX8Z9UFTKWLLn+V7NOaby6niNPZUdvKCRw==
 
-ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.16.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.0, ember-cli-babel@^6.8.1:
+ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.16.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.18.0.tgz#3f6435fd275172edeff2b634ee7b29ce74318957"
   integrity sha512-7ceC8joNYxY2wES16iIBlbPSxwKDBhYwC8drU3ZEvuPDMwVv1KzxCNu1fvxyFEBWhwaRNTUxSCsEVoTd9nosGA==
@@ -8095,18 +8095,6 @@ git-repo-info@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-2.1.1.tgz#220ffed8cbae74ef8a80e3052f2ccb5179aed058"
   integrity sha512-8aCohiDo4jwjOwma4FmYFd3i97urZulL8XL24nIPxuE+GZnfsAyy/g2Shqx6OjUiFKUXZM+Yy+KHnOmmA3FVcg==
-
-git-repo-info@~1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-1.2.0.tgz#43d8513e04a24dd441330a2f7c6655a709fdbaf2"
-  integrity sha1-Q9hRPgSiTdRBMwovfGZVpwn9uvI=
-
-git-repo-version@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/git-repo-version/-/git-repo-version-0.4.1.tgz#75fab9a0a4ec8470755b0eea7fdaa6f9d41453bf"
-  integrity sha1-dfq5oKTshHB1Ww7qf9qm+dQUU78=
-  dependencies:
-    git-repo-info "~1.2.0"
 
 git-tools@^0.1.4:
   version "0.1.4"
