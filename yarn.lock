@@ -6460,10 +6460,10 @@ ember-compatibility-helpers@^1.1.2, ember-compatibility-helpers@^1.2.0:
     ember-cli-version-checker "^2.1.1"
     semver "^5.4.1"
 
-"ember-concurrency@^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0 || ^1.1.0":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-1.1.7.tgz#b3f0c0478db1096503499d39e1b263c575cd52ef"
-  integrity sha512-PtEJvB4wG8e5CEHRC9ILl2BxF6U/xlMOhfCji/x7FxNFB9M230Du86LAy+4/yOozZHyoARVuazABPUj02P+DmQ==
+"ember-concurrency@^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0 || ^2.0.0-rc.1":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-1.3.0.tgz#66f90fb792687470bcee1172adc0ebf33f5e8b9c"
+  integrity sha512-DwGlfWFpYyAkTwsedlEtK4t1DznJSculAW6Vq5S1C0shVPc5b6tTpHB2FFYisannSYkm+wpm1f1Pd40qiNPtOQ==
   dependencies:
     ember-cli-babel "^7.7.3"
     ember-compatibility-helpers "^1.2.0"
@@ -6551,16 +6551,16 @@ ember-power-calendar-moment@^0.1.7:
     ember-cli-babel "^7.7.3"
     ember-cli-moment-shim "^3.7.1"
 
-ember-power-calendar@^0.16.0:
-  version "0.16.2"
-  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.16.2.tgz#db7f222dfe2a2902b8ce1e0717868b89d8760dbf"
-  integrity sha512-CFb/7NsFZznUbnO2/vojrwTUyw+7If7CptIxT+5qFFvpBC2vKh5YwB117n5U2pmfCgqBbKNK4BzdiDx0it8JYw==
+ember-power-calendar@^0.16.3:
+  version "0.16.3"
+  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.16.3.tgz#72a1a30eb43c1a4a0d1d049ff417d08dce6f60e0"
+  integrity sha512-YhaDxJTAy2Pn2X3mISiTInob0eB8fjcWL6XljclJj4tgOceOxsfYeBhmEg9EilXB+264G0wc1MB9F/idptJaRQ==
   dependencies:
     ember-assign-helper "^0.3.0"
     ember-cli-babel "^7.18.0"
     ember-cli-element-closest-polyfill "^0.0.2"
     ember-cli-htmlbars "^4.2.3"
-    ember-concurrency "^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0 || ^1.1.0"
+    ember-concurrency "^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0 || ^2.0.0-rc.1"
     ember-decorators "^6.1.1"
     ember-element-helper "^0.2.0"
     ember-truth-helpers "^2.1.0 || ^3.0.0"
