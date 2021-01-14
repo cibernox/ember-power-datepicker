@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { action } from '@ember/object';
+import { action, set } from '@ember/object';
 import moment from 'moment';
 
 export default class extends Controller {
@@ -14,6 +14,6 @@ export default class extends Controller {
 
   @action
   updateSelectedValue({ date }) {
-    this.set('selected', date);
+    set(this, 'selected', date);
   }
 }
