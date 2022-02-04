@@ -32,11 +32,11 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
-    "ember-basic-dropdown": "^3.0.11",
+    "ember-basic-dropdown": "^4.0.2",
     "ember-cli-babel": "^7.26.10",
     "ember-cli-htmlbars": "^5.7.2",
     "ember-decorators": "^6.1.1",
-    "ember-power-calendar": "^0.16.3"
+    "ember-power-calendar": "^0.16.5"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -47,7 +47,7 @@
     "babel-eslint": "^10.1.0",
     "bootstrap-sass": "^3.3.7",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-assign-helper": "^0.3.0",
+    "ember-assign-helper": "^0.4.0",
     "ember-auto-import": "^1.12.0",
     "ember-cli": "~3.28.5",
     "ember-cli-app-version": "^4.0.0",
