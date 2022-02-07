@@ -5,7 +5,7 @@ import moment from 'moment';
 export default class extends Controller {
   twoDaysAgo = moment().add(-2, 'days');
 
-  twoWeeksFromNow = moment.add(2, 'weeks');
+  twoWeeksFromNow = moment().add(2, 'weeks');
 
   log() {
     // console.debug(...arguments);
