@@ -36,7 +36,7 @@
     "ember-cli-babel": "^7.26.10",
     "ember-cli-htmlbars": "^5.7.2 || ^6.0.0",
     "ember-decorators": "^6.1.1",
-    "ember-power-calendar": "git+https://github.com/mkszepp/ember-power-calendar.git#5f50a6ba308bc29a9c92e4a26aca6b7f46d401ca"
+    "ember-power-calendar": "git+https://github.com/mkszepp/ember-power-calendar.git#79edc5829092715f95531bdf6c0f6eb8339eee0e"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",

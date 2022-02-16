@@ -5557,9 +5557,9 @@ ember-power-calendar-moment@^0.2.0:
     ember-cli-babel "^7.26.10"
     ember-cli-htmlbars "^5.7.2"
 
-"ember-power-calendar@git+https://github.com/mkszepp/ember-power-calendar.git#5f50a6ba308bc29a9c92e4a26aca6b7f46d401ca":
+"ember-power-calendar@git+https://github.com/mkszepp/ember-power-calendar.git#79edc5829092715f95531bdf6c0f6eb8339eee0e":
   version "0.16.5"
-  resolved "git+https://github.com/mkszepp/ember-power-calendar.git#5f50a6ba308bc29a9c92e4a26aca6b7f46d401ca"
+  resolved "git+https://github.com/mkszepp/ember-power-calendar.git#79edc5829092715f95531bdf6c0f6eb8339eee0e"
   dependencies:
     ember-assign-helper "^0.3.0 || ^0.4.0"
     ember-cli-babel "^7.18.0"
