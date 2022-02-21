@@ -18,7 +18,7 @@
     @onCenterChange={{this.onCenterChange}}
     @onSelect={{this.handleSelect}}
     @selected={{@selected}} as |cal|>
-    {{#with (hash
+    {{#let (hash
         uniqueId=dd.uniqueId
         calendarUniqueId=cal.uniqueId
         isOpen=dd.isOpen
@@ -40,6 +40,6 @@
           Days=(component cal.Days calendar=datepicker)
         )
       )}}
-    {{/with}}
+    {{/let}}
   </PowerCalendar>
 </BasicDropdown>
