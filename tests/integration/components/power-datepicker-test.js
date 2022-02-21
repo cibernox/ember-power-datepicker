@@ -4,21 +4,25 @@ import { render, click, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { clickTrigger } from 'ember-basic-dropdown/test-support/helpers';
 import setupCustomAssertions from 'ember-cli-custom-assertions/test-support';
+import { set } from '@ember/object';
 
-module('Integration | Component | power-datepicker', function(hooks) {
+module('Integration | Component | power-datepicker', function (hooks) {
   setupRenderingTest(hooks);
 
   setupCustomAssertions(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(function () {
     let calendarService = this.owner.lookup('service:power-calendar');
     calendarService.set('date', new Date(2013, 9, 18));
   });
 
-  test('Can be open and closed clicking on the trigger', async function(assert) {
+  test('Can be open and closed clicking on the trigger', async function (assert) {
     assert.expect(5);
+    this.updateSelectedValue = ({ date }) => {
+      set(this, 'selected', date);
+    };
     await render(hbs`
-      <PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
+      <PowerDatepicker @selected={{this.selected}} @onSelect={{this.updateSelectedValue}} as |dp|>
         <dp.Trigger>Click me</dp.Trigger>
         <dp.Content>
           <dp.Nav />
@@ -36,15 +40,16 @@ module('Integration | Component | power-datepicker', function(hooks) {
     assert.dom('.ember-basic-dropdown-content').doesNotExist('The datepicker is closed again');
   });
 
-  test('Clicking on a day invokes the `onSelect` action', async function(assert) {
+  test('Clicking on a day invokes the `onSelect` action', async function (assert) {
     assert.expect(3);
-    this.set('onSelect', (day, datepicker, e) => {
+    this.onSelect = (day, datepicker, e) => {
       assert.isDay(day, 'The first argument is a day');
       assert.isDatepicker(datepicker, 'The second argument is the calendar\'s public API');
       assert.ok(e instanceof Event, 'The third argument is an event');
-    });
+    };
+
     await render(hbs`
-      <PowerDatepicker @selected={{selected}} @onSelect={{onSelect}} as |dp|>
+      <PowerDatepicker @selected={{this.selected}} @onSelect={{this.onSelect}} as |dp|>
         <dp.Trigger>Click me</dp.Trigger>
         <dp.Content>
           <dp.Nav />
@@ -60,10 +65,13 @@ module('Integration | Component | power-datepicker', function(hooks) {
 
   test('Clicking on a day invokes selects it and closes the datepicker', async function(assert) {
     assert.expect(3);
+    this.updateSelectedValue = ({ date }) => {
+      set(this, 'selected', date);
+    };
 
     await render(hbs`
-      <PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
-        <dp.Trigger>{{selected}}</dp.Trigger>
+      <PowerDatepicker @selected={{this.selected}} @onSelect={{this.updateSelectedValue}} as |dp|>
+        <dp.Trigger>{{this.selected}}</dp.Trigger>
         <dp.Content>
           <dp.Nav />
           <dp.Days />
@@ -81,10 +89,13 @@ module('Integration | Component | power-datepicker', function(hooks) {
 
   test('When passed `closeOnSelect=false` selecting a date doesn\'t close the datepicker', async function(assert) {
     assert.expect(3);
+    this.updateSelectedValue = ({ date }) => {
+      set(this, 'selected', date);
+    };
 
     await render(hbs`
-      <PowerDatepicker @closeOnSelect={{false}} @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
-        <dp.Trigger>{{selected}}</dp.Trigger>
+      <PowerDatepicker @closeOnSelect={{false}} @selected={{this.selected}} @onSelect={{this.updateSelectedValue}} as |dp|>
+        <dp.Trigger>{{this.selected}}</dp.Trigger>
         <dp.Content>
           <dp.Nav />
           <dp.Days />
@@ -102,8 +113,11 @@ module('Integration | Component | power-datepicker', function(hooks) {
 
   test('it honors `@matchTriggerWidth`', async function(assert) {
     assert.expect(1);
+    this.updateSelectedValue = ({ date }) => {
+      set(this, 'selected', date);
+    };
     await render(hbs`
-      <PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} @matchTriggerWidth={{true}} as |dp|>
+      <PowerDatepicker @selected={{this.selected}} @onSelect={{this.updateSelectedValue}} @matchTriggerWidth={{true}} as |dp|>
         <dp.Trigger style="float: left;min-width: 600px">
           Click me!
         </dp.Trigger>
