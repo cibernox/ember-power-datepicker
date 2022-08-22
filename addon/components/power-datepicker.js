@@ -1,12 +1,11 @@
 import Component from '@ember/component';
 import templateLayout from '../templates/components/power-datepicker';
-
-import { layout, tagName } from '@ember-decorators/component';
 import { action, set } from '@ember/object';
-
 import { fallbackAction } from '../utils/computed-properties';
 
-export default @layout(templateLayout) @tagName('') class extends Component {
+export default class extends Component {
+  layout = templateLayout
+  tagName = ''
   closeOnSelect = true
   format = 'YYYY/MM/DD'
 
