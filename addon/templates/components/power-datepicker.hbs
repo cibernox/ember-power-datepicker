@@ -34,10 +34,10 @@
       {{yield (assign
         datepicker
         (hash
-          Trigger=(component dd.Trigger dropdown=datepicker defaultClass="ember-power-datepicker-trigger")
-          Content=(component dd.Content dropdown=datepicker defaultClass="ember-power-datepicker-content")
-          Nav=(component cal.Nav calendar=datepicker)
-          Days=(component cal.Days calendar=datepicker)
+          Trigger=(component (ensure-safe-component dd.Trigger) dropdown=datepicker defaultClass="ember-power-datepicker-trigger")
+          Content=(component (ensure-safe-component dd.Content) dropdown=datepicker defaultClass="ember-power-datepicker-content")
+          Nav=(component (ensure-safe-component cal.Nav) calendar=datepicker)
+          Days=(component (ensure-safe-component cal.Days) calendar=datepicker)
         )
       )}}
     {{/let}}
