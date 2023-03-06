@@ -1,3 +1,6 @@
+# 0.9.0
+- Update ember-power-calendar and ember-basic-dropdown to latest and greatest, which brings embroider support among other things.
+
 # 0.8.1
 - [ENHANCE] Relax dependency on ember-truth-helpers.
 # 0.8.0
