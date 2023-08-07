@@ -6581,19 +6581,6 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
-"fsevents@^1.2.7":
-  "integrity" "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw=="
-  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz"
-  "version" "1.2.13"
-  dependencies:
-    "bindings" "^1.5.0"
-    "nan" "^2.12.1"
-
-"fsevents@~2.3.2":
-  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
-  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
-  "version" "2.3.2"
-
 "fstream-ignore@^1.0.0":
   "version" "1.0.3"
   dependencies:
@@ -8952,12 +8939,19 @@
   "resolved" "https://registry.npmjs.org/mktemp/-/mktemp-0.4.0.tgz"
   "version" "0.4.0"
 
-"moment-timezone@^0.3.0", "moment-timezone@^0.5.34":
+"moment-timezone@^0.3.0":
   "integrity" "sha512-glTWIu3fKgZIMS9KwaPYvyf7M6jazusAGvWEOqfL09nXDtYTO75BEXqseQhwNAcQvifQlQ9Q7tWpMnDu+TxT+w=="
   "resolved" "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.3.1.tgz"
   "version" "0.3.1"
   dependencies:
     "moment" ">= 2.6.0"
+
+"moment-timezone@^0.5.34":
+  "integrity" "sha512-72j3aNyuIsDxdF1i7CEgV2FfxM1r6aaqJyLB2vwb33mXYyoyLly+F1zbWqhA3/bVIoJ4szlUoMbUnVdid32NUQ=="
+  "resolved" "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.43.tgz"
+  "version" "0.5.43"
+  dependencies:
+    "moment" "^2.29.4"
 
 "moment@^2", "moment@^2.29.4", "moment@>= 2.6.0":
   "integrity" "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
