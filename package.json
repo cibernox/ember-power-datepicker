@@ -40,7 +40,7 @@
     "ember-basic-dropdown": "^7.2.1",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-htmlbars": "^6.3.0",
-    "ember-power-calendar": "git+https://git@github.com/cibernox/ember-power-calendar.git#3bcbf1e49d52c2764bac00647bd92f2a64b053c6"
+    "ember-power-calendar": "git+https://git@github.com/cibernox/ember-power-calendar.git#ed1b35041403a2b522a1a06cc2b5e71a9261656d"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.10",
