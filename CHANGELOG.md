@@ -1,3 +1,11 @@
+## Master
+- [BREAKING] Drop support for node < 16 (#82)
+- [BREAKING] Drop support for Ember < 3.28 (#82)
+- [BREAKING] Update components to glimmer (#82)
+- [BREAKING] Update dependencies to latest version (#82)
+- [BUGFIX] Add ember-auto-import as dependency (#82)
+- [Internal] Update to ember 4.12 & switch to glimmer components (#82)
+
 # 0.9.0
 - Update ember-power-calendar and ember-basic-dropdown to latest and greatest, which brings embroider support among other things.
 
