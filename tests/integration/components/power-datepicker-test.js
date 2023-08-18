@@ -3,13 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, click, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { clickTrigger } from 'ember-basic-dropdown/test-support/helpers';
-import setupCustomAssertions from 'ember-cli-custom-assertions/test-support';
 import { set } from '@ember/object';
 
 module('Integration | Component | power-datepicker', function (hooks) {
   setupRenderingTest(hooks);
-
-  setupCustomAssertions(hooks);
 
   hooks.beforeEach(function () {
     let calendarService = this.owner.lookup('service:power-calendar');
@@ -31,20 +28,33 @@ module('Integration | Component | power-datepicker', function (hooks) {
       </PowerDatepicker>
     `);
 
-    assert.dom('.ember-basic-dropdown-content').doesNotExist('The datepicker is closed');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .doesNotExist('The datepicker is closed');
     await clickTrigger();
-    assert.dom('.ember-basic-dropdown-content').exists({ count: 1 }, 'The datepicker is open');
-    assert.dom('.ember-basic-dropdown-content .ember-power-calendar-nav').exists({ count: 1 }, 'It contains the nav');
-    assert.dom('.ember-basic-dropdown-content .ember-power-calendar-days').exists({ count: 1 }, 'It contains the days');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .exists({ count: 1 }, 'The datepicker is open');
+    assert
+      .dom('.ember-basic-dropdown-content .ember-power-calendar-nav')
+      .exists({ count: 1 }, 'It contains the nav');
+    assert
+      .dom('.ember-basic-dropdown-content .ember-power-calendar-days')
+      .exists({ count: 1 }, 'It contains the days');
     await clickTrigger();
-    assert.dom('.ember-basic-dropdown-content').doesNotExist('The datepicker is closed again');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .doesNotExist('The datepicker is closed again');
   });
 
   test('Clicking on a day invokes the `onSelect` action', async function (assert) {
     assert.expect(3);
     this.onSelect = (day, datepicker, e) => {
       assert.isDay(day, 'The first argument is a day');
-      assert.isDatepicker(datepicker, 'The second argument is the calendar\'s public API');
+      assert.isDatepicker(
+        datepicker,
+        "The second argument is the calendar's public API",
+      );
       assert.ok(e instanceof Event, 'The third argument is an event');
     };
 
@@ -59,11 +69,13 @@ module('Integration | Component | power-datepicker', function (hooks) {
     `);
 
     await clickTrigger();
-    let el = findAll('.ember-power-calendar-day--current-month').find(el => el.textContent.trim() === '15');
+    let el = findAll('.ember-power-calendar-day--current-month').find(
+      (el) => el.textContent.trim() === '15',
+    );
     await click(el);
   });
 
-  test('Clicking on a day invokes selects it and closes the datepicker', async function(assert) {
+  test('Clicking on a day invokes selects it and closes the datepicker', async function (assert) {
     assert.expect(3);
     this.updateSelectedValue = ({ date }) => {
       set(this, 'selected', date);
@@ -80,14 +92,20 @@ module('Integration | Component | power-datepicker', function (hooks) {
     `);
 
     await clickTrigger();
-    assert.dom('.ember-basic-dropdown-content').exists({ count: 1 }, 'The datepicker is open');
-    let el = findAll('.ember-power-calendar-day--current-month').find(el => el.textContent.trim() === '15');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .exists({ count: 1 }, 'The datepicker is open');
+    let el = findAll('.ember-power-calendar-day--current-month').find(
+      (el) => el.textContent.trim() === '15',
+    );
     await click(el);
-    assert.dom('.ember-basic-dropdown-content').doesNotExist('The datepicker is closed again');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .doesNotExist('The datepicker is closed again');
     assert.dom('.ember-power-datepicker-trigger').hasText(/Oct 15 2013/);
   });
 
-  test('When passed `closeOnSelect=false` selecting a date doesn\'t close the datepicker', async function(assert) {
+  test("When passed `closeOnSelect=false` selecting a date doesn't close the datepicker", async function (assert) {
     assert.expect(3);
     this.updateSelectedValue = ({ date }) => {
       set(this, 'selected', date);
@@ -104,20 +122,27 @@ module('Integration | Component | power-datepicker', function (hooks) {
     `);
 
     await clickTrigger();
-    assert.dom('.ember-basic-dropdown-content').exists({ count: 1 }, 'The datepicker is open');
-    let el = findAll('.ember-power-calendar-day--current-month').find(el => el.textContent.trim() === '15');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .exists({ count: 1 }, 'The datepicker is open');
+    let el = findAll('.ember-power-calendar-day--current-month').find(
+      (el) => el.textContent.trim() === '15',
+    );
     await click(el);
-    assert.dom('.ember-basic-dropdown-content').exists({ count: 1 }, 'The datepicker is still opened');
+    assert
+      .dom('.ember-basic-dropdown-content')
+      .exists({ count: 1 }, 'The datepicker is still opened');
     assert.dom('.ember-power-datepicker-trigger').hasText(/Oct 15 2013/);
   });
 
-  test('it honors `@matchTriggerWidth`', async function(assert) {
+  test('it honors `@matchTriggerWidth`', async function (assert) {
     assert.expect(1);
     this.updateSelectedValue = ({ date }) => {
       set(this, 'selected', date);
     };
     await render(hbs`
       <PowerDatepicker @selected={{this.selected}} @onSelect={{this.updateSelectedValue}} @matchTriggerWidth={{true}} as |dp|>
+        {{! template-lint-disable no-inline-styles }}
         <dp.Trigger style="float: left;min-width: 600px">
           Click me!
         </dp.Trigger>

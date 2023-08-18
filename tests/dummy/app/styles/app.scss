@@ -1,5 +1,7 @@
-@import 'bootstrap';
+@import "bootstrap";
 @import "ember-power-datepicker";
+
+// Demo styles
 
 .demo-datepicker-small {
   @include ember-power-calendar($cell-size: 30px);
@@ -9,63 +11,66 @@
   @include ember-power-calendar($cell-size: 50px);
 }
 
-//
-//
 // Animation
-//
-//
 
 @keyframes drop-fade-below {
-  0%   {
+  0% {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
+
 @keyframes drop-fade-above {
-  0%   {
+  0% {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 
-.slide-fade, %slide-fade {
+.slide-fade,
+%slide-fade {
   will-change: transform, opacity;
+
   &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-in {
-    animation: drop-fade-below .15s;
+    animation: drop-fade-below 0.15s;
   }
+
   &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-out {
-    animation: drop-fade-below .15s reverse;
+    animation: drop-fade-below 0.15s reverse;
   }
+
   &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-in {
-    animation: drop-fade-above .15s;
+    animation: drop-fade-above 0.15s;
   }
+
   &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-out {
-    animation: drop-fade-above .15s reverse;
+    animation: drop-fade-above 0.15s reverse;
   }
 }
 
-//
-//
 // Bootstrap
-//
-//
 
 .dropdown-menu.ember-basic-dropdown-content {
   display: block;
 }
+
 .ember-basic-dropdown-content.bootstrap-datepicker-theme {
   margin-top: 5px;
-	background: #ffffff;
-	border: 1px solid #cccccc;
-  &:after, &:before {
+  background: #fff;
+  border: 1px solid #ccc;
+
+  &::after,
+  &::before {
     bottom: 100%;
     left: 15px;
     border: solid transparent;
@@ -75,33 +80,29 @@
     position: absolute;
     pointer-events: none;
   }
-  &:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #ffffff;
+
+  &::after {
+    border-color: rgba(255, 255, 255, 0%);
+    border-bottom-color: #fff;
     border-width: 5px;
     margin-left: -5px;
   }
-  &:before {
-    border-color: rgba(204, 204, 204, 0);
-    border-bottom-color: #cccccc;
+
+  &::before {
+    border-color: rgba(204, 204, 204, 0%);
+    border-bottom-color: #ccc;
     border-width: 6px;
     margin-left: -6px;
   }
 }
 
-
-//
-//
 // MATERIAL
-//
-//
+
 .md-datepicker-input-container {
   position: relative;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 12%);
   display: inline-block;
   width: auto;
-  border-bottom-color: rgba(0,0,0,0.12);
 }
 
 .md-datepicker-input {
@@ -114,7 +115,7 @@
   min-width: 120px;
   max-width: 328px;
   padding: 0 0 5px;
-  color: rgba(0,0,0,0.87);
+  color: rgba(0, 0, 0, 87%);
 }
 
 .md-datepicker-triangle-button.md-button.md-icon-button {
@@ -123,6 +124,7 @@
   position: absolute;
   padding: 8px;
 }
+
 .md-button {
   display: inline-block;
   position: relative;
@@ -140,7 +142,7 @@
   padding: 0 6px;
   margin: 6px 8px;
   background: transparent;
-  color: currentColor;
+  color: currentcolor;
   white-space: nowrap;
   text-transform: uppercase;
   font-weight: 500;
@@ -150,10 +152,13 @@
   font-family: inherit;
   text-decoration: none;
   overflow: hidden;
-  transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
+  transition:
+    box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.md-button, .md-button:focus {
+.md-button,
+.md-button:focus {
   outline: none;
 }
 
@@ -173,54 +178,74 @@
   width: 40px;
   border-radius: 50%;
 }
+
 .md-datepicker-triangle-button .md-datepicker-expand-triangle {
-  border-top-color: rgba(0,0,0,0.38);
+  border-top-color: rgba(0, 0, 0, 38%);
 }
+
 .md-datepicker-expand-triangle {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid;
 }
+
 .ember-basic-dropdown-content.material-datepicker-theme {
   @extend %slide-fade;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
-  @include ember-power-calendar($cell-size: 40px, $row-padding-left: 15px, $row-padding-right: 15px);
+
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 20%),
+    0 1px 1px 0 rgba(0, 0, 0, 14%),
+    0 2px 1px -1px rgba(0, 0, 0, 12%);
+
+  @include ember-power-calendar(
+    $cell-size: 40px,
+    $row-padding-left: 15px,
+    $row-padding-right: 15px
+  );
+
   .ember-power-calendar-day {
     background-color: #fff;
-    color: rgba(0,0,0,0.87);
+    color: rgba(0, 0, 0, 87%);
     border-radius: 50%;
     box-shadow: none;
+
     &:hover {
       background-color: #e0e0e0;
     }
   }
+
   .ember-power-calendar-weekdays {
     background-color: #e0e0e0;
   }
+
   .day-number {
     border-radius: 50%;
+
     &:hover {
       background-color: #e0e0e0;
     }
   }
-  .ember-power-calendar-day--selected, .ember-power-calendar-day--selected:hover {
-    background: rgb(16,108,200);
-    color: rgba(255,255,255,0.87);
+
+  .ember-power-calendar-day--selected,
+  .ember-power-calendar-day--selected:hover {
+    background: rgb(16, 108, 200);
+    color: rgba(255, 255, 255, 87%);
     font-weight: normal;
   }
+
   .ember-power-calendar-nav-title {
     line-height: 3;
   }
+
   .ember-power-calendar-nav-control {
-    color: rgba(0,0,0,0.54);
-    font-family: arial;
+    color: rgba(0, 0, 0, 54%);
+    font-family: Arial, sans-serif;
     font-size: 200%;
   }
 }
-

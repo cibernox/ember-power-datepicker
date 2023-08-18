@@ -17,6 +17,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" readonly value={{this.selected}}>
     </dp.Trigger>
 
@@ -31,6 +32,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" readonly value={{this.selected}}>
     </dp.Trigger>
 

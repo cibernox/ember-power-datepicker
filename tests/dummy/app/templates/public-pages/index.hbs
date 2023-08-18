@@ -6,6 +6,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1" class="foobar-yo">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="form-control" readonly value={{this.selected}}>
     </dp.Trigger>
 
@@ -20,6 +21,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="form-control" readonly value={{this.selected}}>
     </dp.Trigger>
 
@@ -34,6 +36,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="form-control" readonly value={{this.selected}}>
     </dp.Trigger>
 
@@ -50,6 +53,7 @@
     @onSelect={{this.updateSelectedValue}} as |dp|>
 
     <div class="md-datepicker-input-container">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="md-datepicker-input" readonly value={{this.selected}} data-ebd-id="{{dp.uniqueId}}-trigger">
       <button {{on "click" dp.actions.open}}
         aria-controls="ember-basic-dropdown-content-{{dp.uniqueId}}"
@@ -70,6 +74,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="form-control" readonly value={{this.selected}}>
     </dp.Trigger>
 
@@ -85,6 +90,7 @@
     @selected={{this.selected}}
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="form-control" readonly value={{this.selected}}>
     </dp.Trigger>
 
@@ -105,6 +111,7 @@
     @locale="ru"
     @onSelect={{this.updateSelectedValue}} as |dp|>
     <dp.Trigger tabindex="-1">
+      {{! template-lint-disable require-input-label }}
       <input type="text" class="form-control" readonly value={{this.selected}}>
     </dp.Trigger>
 
