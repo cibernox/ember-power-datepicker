@@ -1,4 +1,4 @@
-export default function isDatepicker(context, datepicker, message) {
+export default function isDatepicker(datepicker, message) {
   let result = !!datepicker
     && Object.prototype.hasOwnProperty.call(datepicker, 'center')
     && typeof datepicker.loading === 'boolean'

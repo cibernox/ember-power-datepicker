@@ -3,13 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, click, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { clickTrigger } from 'ember-basic-dropdown/test-support/helpers';
-import setupCustomAssertions from 'ember-cli-custom-assertions/test-support';
 import { set } from '@ember/object';
 
 module('Integration | Component | power-datepicker', function (hooks) {
   setupRenderingTest(hooks);
-
-  setupCustomAssertions(hooks);
 
   hooks.beforeEach(function () {
     let calendarService = this.owner.lookup('service:power-calendar');
