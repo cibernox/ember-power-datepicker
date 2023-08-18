@@ -1,4 +1,8 @@
-# ember-power-datepicker
+# Ember Power Datepicker
+
+[![CI](https://github.com/cibernox/ember-power-datepicker/actions/workflows/ci.yml/badge.svg)](https://github.com/cibernox/ember-power-datepicker/actions/workflows/ci.yml)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-power-datepicker.svg)](http://emberobserver.com/addons/ember-power-datepicker)
+[![npm version](https://badge.fury.io/js/ember-power-datepicker.svg)](https://badge.fury.io/js/ember-power-datepicker)
 
 This addon it's the last member of the [Ember Power Project](http://www.ember-power-select.com/support-the-project) family and it
 combines [ember-basic-dropdown](http://www.ember-basic-dropdown.com) and [ember-power-calendar](http://www.ember-power-calendar.com)
@@ -8,12 +12,11 @@ As the components this one is born from, it aims to be flexible and customizable
 taylor your perfect datepicker. For that it extrictly follows DDAU approach and all its
 subcomponents can be omitted or replaced by your own.
 
-## Disclaimer
+## Compatibility
 
-This addon is in active development so expect some churn.
-A changelog file will be maintained to surface what changed and when and ease updates.
-
-[Small demo](https://ember-datepicker.development.pagefrontapp.com/)
+* Ember.js v3.28 or above
+* Ember CLI v3.28 or above
+* Node.js v16 or above
 
 ## Installation
 
@@ -41,7 +44,7 @@ are accepted by this addon.
 Let's see a basic example:
 
 ```hbs
-<PowerDatepicker @selected={{selected}} @onSelect={{action (mut selected) value="date"}} as |dp|>
+<PowerDatepicker @selected={{this.selected}} @onSelect={{this.onSelect}} as |dp|>
   <dp.Trigger tabindex="-1">
     <input type="text" class="my-input-class" readonly value={{moment-format selected}}>
   </dp.Trigger>

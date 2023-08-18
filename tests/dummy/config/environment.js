@@ -7,7 +7,7 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'history',
     moment: {
-      includeLocales: true
+      includeLocales: true,
     },
     EmberENV: {
       EXTEND_PROTOTYPES: false,

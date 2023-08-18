@@ -1,24 +1,29 @@
-import Component from '@ember/component';
-import templateLayout from '../templates/components/power-datepicker';
-import { action, set } from '@ember/object';
-import { fallbackAction } from '../utils/computed-properties';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class extends Component {
-  layout = templateLayout
-  tagName = ''
-  closeOnSelect = true
-  format = 'YYYY/MM/DD'
+  @tracked center;
 
-  @fallbackAction(function(day){
-    set(this, 'center', day.date);
-  }) onCenterChange
+  get closeOnSelect() {
+    return this.args.closeOnSelect !== undefined
+      ? this.args.closeOnSelect
+      : true;
+  }
 
-  // Actions
+  @action
+  onCenterChange(day) {
+    if (this.args.onCenterChange) {
+      this.args.onCenterChange(day);
+    }
+
+    this.center = day.date;
+  }
+
   @action
   handleSelect(day, datepicker, e) {
-    let { onSelect, closeOnSelect } = this;
-    let value = onSelect(day, datepicker, e);
-    if (value === false || !closeOnSelect) {
+    let value = this.args.onSelect(day, datepicker, e);
+    if (value === false || !this.closeOnSelect) {
       return;
     }
     datepicker.actions.close();

@@ -6,6 +6,7 @@
     @onSelect={{this.updateSelectedValue}}
     @closeOnSelect={{false}} as |dp|>
     <dp.Trigger>
+      {{! template-lint-disable require-input-label }}
       <input type="text" readonly value={{this.selected1}}>
     </dp.Trigger>
     <dp.Content>
