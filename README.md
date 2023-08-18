@@ -66,13 +66,6 @@ You can learm more about them it here: http://www.ember-power-calendar.com/docs/
 The `selected` and `onSelect` are the only mandatory options. You can omit them, but if
 you do and you don't allow users to select a date, what do you want a datepicker for?
 
-## Ember and Browser support
-
-This addon is only tested back to Ember 2.8. It may or may not work in older versions.
-Javascript wise the addon should work back to IE10, but CSS wise the default styles use
-flexbox, so expect only IE11 support unless you roll out your own template using `<table>`,
-which you can.
-
 ## Testing
 
 This addon also provides a convenient
