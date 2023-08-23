@@ -1,4 +1,4 @@
-## Master
+## 0.10.0
 - [BREAKING] Drop support for node < 16 (#82)
 - [BREAKING] Drop support for Ember < 3.28 (#82)
 - [BREAKING] Update components to glimmer (#82)
