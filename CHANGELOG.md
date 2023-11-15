@@ -1,3 +1,15 @@
+
+## v0.11.0 (2023-11-15)
+
+#### :boom: Breaking Change
+* [#89](https://github.com/cibernox/ember-power-datepicker/pull/89) Update dependency `ember-power-calendar` ([@mkszepp](https://github.com/mkszepp))
+
+#### :house: Internal
+* [#88](https://github.com/cibernox/ember-power-datepicker/pull/88) Add release-it ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## 0.10.0
 - [BREAKING] Drop support for node < 16 (#82)
 - [BREAKING] Drop support for Ember < 3.28 (#82)
