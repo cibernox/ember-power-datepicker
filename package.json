@@ -51,6 +51,7 @@
     "@embroider/test-setup": "^3.0.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
+    "@release-it-plugins/lerna-changelog": "^6.0.0",
     "bootstrap-sass": "^3.4.3",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.2.0",
@@ -83,6 +84,7 @@
     "prettier": "^3.0.2",
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
+    "release-it": "^16.0.0",
     "sass": "^1.66.0",
     "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0",
@@ -101,5 +103,19 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
