@@ -40,7 +40,7 @@
     "ember-basic-dropdown": "^7.2.2",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-htmlbars": "^6.3.0",
-    "ember-power-calendar": "^0.20.0"
+    "ember-power-calendar": "^0.21.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.10",
@@ -65,7 +65,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^8.0.0",
-    "ember-power-calendar-moment": "^0.3.0",
+    "ember-power-calendar-moment": "^0.4.0",
     "ember-qunit": "^7.0.0",
     "ember-resolver": "^11.0.1",
     "ember-source": "~4.12.0",
