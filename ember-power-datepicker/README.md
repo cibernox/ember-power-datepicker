@@ -20,7 +20,7 @@ subcomponents can be omitted or replaced by your own.
 
 ## Installation
 
-* `ember install ember-power-datepicker`
+* `ember install ember-basic-dropdown ember-power-select ember-power-datepicker`
 
 ## Setup
 
@@ -65,14 +65,3 @@ You can learm more about them it here: http://www.ember-power-calendar.com/docs/
 
 The `selected` and `onSelect` are the only mandatory options. You can omit them, but if
 you do and you don't allow users to select a date, what do you want a datepicker for?
-
-## Testing
-
-This addon also provides a convenient
-`datepickerSelect('selector', dateOrMoment)` test helper to interact with the component in tests.
-
-Import this helpers in your tests like this:
-
-```js
-import { datepickerSelect } from 'ember-power-datepicker/test-support/helpers';
-```
