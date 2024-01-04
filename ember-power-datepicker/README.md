@@ -20,7 +20,7 @@ subcomponents can be omitted or replaced by your own.
 
 ## Installation
 
-* `ember install ember-basic-dropdown ember-power-select ember-power-datepicker`
+* `ember install ember-basic-dropdown ember-power-calendar ember-power-datepicker`
 
 ## Setup
 
