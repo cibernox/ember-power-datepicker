@@ -37,10 +37,8 @@
   },
   "dependencies": {
     "ember-auto-import": "^2.6.3",
-    "ember-basic-dropdown": "^7.2.2",
     "ember-cli-babel": "^7.26.11",
-    "ember-cli-htmlbars": "^6.3.0",
-    "ember-power-calendar": "^0.21.0"
+    "ember-cli-htmlbars": "^6.3.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.10",
@@ -56,6 +54,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.2.0",
     "ember-assign-helper": "^0.4.0",
+    "ember-basic-dropdown": "^8.0.0-beta.3",
     "ember-cli": "~4.12.0",
     "ember-cli-app-version": "^6.0.1",
     "ember-cli-dependency-checker": "^3.3.2",
@@ -65,7 +64,8 @@
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
     "ember-page-title": "^8.0.0",
-    "ember-power-calendar-moment": "^0.4.0",
+    "ember-power-calendar": "0.22.0-beta.1",
+    "ember-power-calendar-moment": "^0.5.0",
     "ember-qunit": "^7.0.0",
     "ember-resolver": "^11.0.1",
     "ember-source": "~4.12.0",
@@ -93,7 +93,9 @@
     "webpack": "^5.88.2"
   },
   "peerDependencies": {
-    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0"
+    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
+    "ember-basic-dropdown": "^8.0.0-beta.3",
+    "ember-power-calendar": "0.22.0-beta.1"
   },
   "engines": {
     "node": "16.* || >= 18"

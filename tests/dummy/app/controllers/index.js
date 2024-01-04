@@ -1,4 +1,6 @@
 import Controller from '@ember/controller';
+// eslint-disable-next-line ember/no-test-support-import
+import {} from 'ember-power-calendar/test-support';
 
 import { action, set } from '@ember/object';
 
