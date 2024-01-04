@@ -1,4 +1,13 @@
 
+
+## v0.12.0-beta.0 (2024-01-04)
+
+#### :boom: Breaking Change
+* [#90](https://github.com/cibernox/ember-power-datepicker/pull/90) Addon to v2 ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v0.11.0 (2023-11-15)
 
 #### :boom: Breaking Change
