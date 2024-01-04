@@ -73,11 +73,11 @@ importers:
         specifier: ^8.2.2
         version: 8.2.2
       ember-basic-dropdown:
-        specifier: 8.0.0-beta.3
-        version: 8.0.0-beta.3(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@3.28.0)(webpack@5.89.0)
+        specifier: 8.0.0-beta.4
+        version: 8.0.0-beta.4(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@3.28.0)(webpack@5.89.0)
       ember-power-calendar:
-        specifier: 0.22.0-beta.2
-        version: 0.22.0-beta.2(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@3.28.0)
+        specifier: 0.22.0-beta.3
+        version: 0.22.0-beta.3(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@3.28.0)
       ember-template-lint:
         specifier: ^5.13.0
         version: 5.13.0
@@ -152,8 +152,8 @@ importers:
         specifier: ^2.7.2
         version: 2.7.2(webpack@5.89.0)
       ember-basic-dropdown:
-        specifier: 8.0.0-beta.3
-        version: 8.0.0-beta.3(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@5.5.0)(webpack@5.89.0)
+        specifier: 8.0.0-beta.4
+        version: 8.0.0-beta.4(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@5.5.0)(webpack@5.89.0)
       ember-cli:
         specifier: ~5.4.1
         version: 5.4.1
@@ -197,8 +197,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(ember-source@5.5.0)
       ember-power-calendar:
-        specifier: 0.22.0-beta.2
-        version: 0.22.0-beta.2(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@5.5.0)
+        specifier: 0.22.0-beta.3
+        version: 0.22.0-beta.3(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@5.5.0)
       ember-power-calendar-moment:
         specifier: ^0.5.0
         version: 0.5.0(ember-source@5.5.0)(moment@2.30.1)
@@ -5533,8 +5533,8 @@ packages:
       - supports-color
       - webpack
 
-  /ember-basic-dropdown@8.0.0-beta.3(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@3.28.0)(webpack@5.89.0):
-    resolution: {integrity: sha512-PyA5OZ6VixT0HqYphTsfN0hLprTDyZyV2igbWHrJooHTjz2T9nOXo3SUFolsRxYg2Gc2gxYMHMfONbtI2gnQXA==}
+  /ember-basic-dropdown@8.0.0-beta.4(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@3.28.0)(webpack@5.89.0):
+    resolution: {integrity: sha512-tSYJ4hclgYaUfW47+orrD/HRwzl+PYaDC5dfxIS0N/+Meb+gZ+oAFon5zwPMNNpiCoNT0dd1lNGf1MUVpk+ppg==}
     peerDependencies:
       '@ember/test-helpers': ^2.9.4 || ^3.2.1
       ember-source: ^3.28.0 || ^4.0.0 || >=5.0.0
@@ -5558,8 +5558,8 @@ packages:
       - webpack
     dev: true
 
-  /ember-basic-dropdown@8.0.0-beta.3(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@5.5.0)(webpack@5.89.0):
-    resolution: {integrity: sha512-PyA5OZ6VixT0HqYphTsfN0hLprTDyZyV2igbWHrJooHTjz2T9nOXo3SUFolsRxYg2Gc2gxYMHMfONbtI2gnQXA==}
+  /ember-basic-dropdown@8.0.0-beta.4(@ember/string@3.1.1)(@ember/test-helpers@3.2.1)(ember-source@5.5.0)(webpack@5.89.0):
+    resolution: {integrity: sha512-tSYJ4hclgYaUfW47+orrD/HRwzl+PYaDC5dfxIS0N/+Meb+gZ+oAFon5zwPMNNpiCoNT0dd1lNGf1MUVpk+ppg==}
     peerDependencies:
       '@ember/test-helpers': ^2.9.4 || ^3.2.1
       ember-source: ^3.28.0 || ^4.0.0 || >=5.0.0
@@ -6329,8 +6329,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-power-calendar@0.22.0-beta.2(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@3.28.0):
-    resolution: {integrity: sha512-FtG5ukEZe0TeLx9Mr/DgWFqyM8kbVSjJTP+4wtG7zpwq2JY0RrpdD2ZrRjILFOgObylYyXjHM074qdq5jjLQjA==}
+  /ember-power-calendar@0.22.0-beta.3(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@3.28.0):
+    resolution: {integrity: sha512-1Yko4o27j95rGWkWRlnhTzKxnbfAH8xBXbh0eP3aa/ywOGX2bwNMrX+OiEJtxAINRZ5j3zNeYKxmMjK1imU6nA==}
     peerDependencies:
       '@ember/test-helpers': ^2.9.4 || ^3.2.1
       ember-source: ^3.28.0 || ^4.0.0 || >=5.0.0
@@ -6351,8 +6351,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-power-calendar@0.22.0-beta.2(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@5.5.0):
-    resolution: {integrity: sha512-FtG5ukEZe0TeLx9Mr/DgWFqyM8kbVSjJTP+4wtG7zpwq2JY0RrpdD2ZrRjILFOgObylYyXjHM074qdq5jjLQjA==}
+  /ember-power-calendar@0.22.0-beta.3(@babel/core@7.23.7)(@ember/test-helpers@3.2.1)(ember-source@5.5.0):
+    resolution: {integrity: sha512-1Yko4o27j95rGWkWRlnhTzKxnbfAH8xBXbh0eP3aa/ywOGX2bwNMrX+OiEJtxAINRZ5j3zNeYKxmMjK1imU6nA==}
     peerDependencies:
       '@ember/test-helpers': ^2.9.4 || ^3.2.1
       ember-source: ^3.28.0 || ^4.0.0 || >=5.0.0
