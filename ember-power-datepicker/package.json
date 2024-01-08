@@ -16,11 +16,13 @@
     "./*": "./dist/*.js",
     "./addon-main.js": "./addon-main.cjs",
     "./ember-power-datepicker.less": "./ember-power-datepicker.less",
+    "./ember-power-datepicker.scss": "./ember-power-datepicker.scss",
     "./_index.scss": "./_index.scss"
   },
   "files": [
     "_index.scss",
     "ember-power-datepicker.less",
+    "ember-power-datepicker.scss",
     "addon-main.cjs",
     "declarations",
     "dist"
