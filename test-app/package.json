@@ -74,7 +74,7 @@
     "bootstrap-sass": "^3.4.3",
     "ember-basic-dropdown": "8.0.0-beta.4",
     "ember-cli-sass": "^11.0.1",
-    "ember-power-calendar": "0.22.0-beta.3",
+    "ember-power-calendar": "0.22.0-beta.4",
     "ember-power-calendar-moment": "^0.5.0",
     "moment": "^2.30.1",
     "sass": "^1.69.7",
