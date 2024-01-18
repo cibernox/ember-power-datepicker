@@ -55,8 +55,8 @@
     "@rollup/plugin-babel": "^6.0.4",
     "babel-plugin-ember-template-compilation": "^2.2.1",
     "concurrently": "^8.2.2",
-    "ember-basic-dropdown": "8.0.0-beta.4",
-    "ember-power-calendar": "0.22.0-beta.4",
+    "ember-basic-dropdown": "8.0.0-beta.5",
+    "ember-power-calendar": "0.22.0-beta.5",
     "ember-template-lint": "^5.13.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
@@ -84,7 +84,7 @@
   "peerDependencies": {
     "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
     "@ember/test-helpers": "^2.9.4 || ^3.2.1",
-    "ember-basic-dropdown": "8.0.0-beta.4",
-    "ember-power-calendar": "0.22.0-beta.4"
+    "ember-basic-dropdown": "8.0.0-beta.5",
+    "ember-power-calendar": "0.22.0-beta.5"
   }
 }
