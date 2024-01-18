@@ -1,5 +1,17 @@
 
 
+
+## v0.12.0-beta.2 (2024-01-18)
+
+#### :rocket: Enhancement
+* [#93](https://github.com/cibernox/ember-power-datepicker/pull/93) Add option to use `ember-power-datepicker.scss` ([@mkszepp](https://github.com/mkszepp))
+
+#### :house: Internal
+* [#106](https://github.com/cibernox/ember-power-datepicker/pull/106) Update ember cli to 5.5 ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v0.12.0-beta.1 (2024-01-04)
 
 ## v0.12.0-beta.0 (2024-01-04)
