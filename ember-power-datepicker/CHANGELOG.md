@@ -1,6 +1,15 @@
 
 
 
+
+## v0.12.0-beta.3 (2024-02-12)
+
+#### :house: Internal
+* [#129](https://github.com/cibernox/ember-power-datepicker/pull/129) Stricter dep management ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v0.12.0-beta.2 (2024-01-18)
 
 #### :rocket: Enhancement
