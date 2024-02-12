@@ -10,6 +10,11 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['ember-power-datepicker'],
     },
+    babel: {
+      plugins: [
+        require.resolve('ember-concurrency/async-arrow-task-transform'),
+      ],
+    },
   });
 
   const { maybeEmbroider } = require('@embroider/test-setup');
