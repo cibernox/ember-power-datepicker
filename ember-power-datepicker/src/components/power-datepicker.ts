@@ -1,9 +1,10 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import type { DropdownActions } from 'ember-basic-dropdown/components/basic-dropdown';
 import type { CalculatePosition, VerticalPosition, HorizontalPosition } from 'ember-basic-dropdown/utils/calculate-position';
 import type { NormalizeCalendarValue } from 'ember-power-calendar/utils';
-import type { CalendarDay, PowerCalendarAPI, CalendarAPI, SelectedDays } from 'ember-power-calendar/components/power-calendar';
+import type { CalendarDay, SelectedDays, PowerCalendarActions } from 'ember-power-calendar/components/power-calendar';
 import type { ComponentLike } from '@glint/template';
 
 interface PowerDatepickerSignature {
@@ -11,13 +12,7 @@ interface PowerDatepickerSignature {
   Args: PowerDatepickerArgs;
   Blocks: {
     default: [
-      {
-        datepicker: any;
-        Trigger: ComponentLike<any>;
-        Content: ComponentLike<any>;
-        Nav: ComponentLike<any>;
-        Days: ComponentLike<any>;
-      },
+      PowerDatepickerDefaultBlock,
     ];
   };
 }
@@ -44,9 +39,30 @@ interface PowerDatepickerArgs {
   ) => void;
   onSelect?: (
     day: CalendarDay,
-    calendar: CalendarAPI,
+    calendar: PowerDatepickerCalendar,
     event: MouseEvent,
   ) => void | boolean;
+}
+
+interface PowerDatepickerActions extends DropdownActions, PowerCalendarActions {}
+
+export interface PowerDatepickerCalendar {
+  uniqueId: string;
+  disabled: boolean;
+  isOpen: boolean;
+  calendarUniqueId: string;
+  selected?: SelectedDays;
+  loading: boolean;
+  center: Date;
+  locale: string;
+  actions: PowerDatepickerActions;
+}
+
+export interface PowerDatepickerDefaultBlock extends PowerDatepickerCalendar {
+  Trigger: ComponentLike<any>;
+  Content: ComponentLike<any>;
+  Nav: ComponentLike<any>;
+  Days: ComponentLike<any>;
 }
 
 export default class PowerDatepickerComponent extends Component<PowerDatepickerSignature> {
@@ -68,12 +84,12 @@ export default class PowerDatepickerComponent extends Component<PowerDatepickerS
   }
 
   @action
-  handleSelect(day: CalendarDay, datepicker: PowerCalendarAPI, e: MouseEvent) {
+  handleSelect(day: CalendarDay, datepicker: PowerDatepickerCalendar, e: MouseEvent) {
     let value = this.args.onSelect && this.args.onSelect(day, datepicker, e);
     if (value === false || !this.closeOnSelect) {
       return;
     }
-    // @ts-ignore Property 'close' does not exist on type 'PowerCalendarActions'.
+
     datepicker.actions.close();
   }
 }
