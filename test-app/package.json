@@ -68,7 +68,7 @@
     "@types/ember__utils": "^4.0.7",
     "@types/qunit": "^2.19.10",
     "@types/rsvp": "^4.0.9",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.0.2",
     "bootstrap-sass": "^3.4.3",
     "broccoli-asset-rev": "^3.0.0",
