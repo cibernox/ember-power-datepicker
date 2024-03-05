@@ -2,6 +2,15 @@
 
 
 
+
+## v0.12.0-beta.5 (2024-03-05)
+
+#### :rocket: Enhancement
+* [#140](https://github.com/cibernox/ember-power-datepicker/pull/140) Convert to typescript ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v0.12.0-beta.4 (2024-02-13)
 
 ## v0.12.0-beta.3 (2024-02-12)
