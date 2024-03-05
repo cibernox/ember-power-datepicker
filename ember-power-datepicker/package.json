@@ -98,9 +98,9 @@
     "@typescript-eslint/parser": "^7.1.0",
     "babel-plugin-ember-template-compilation": "^2.2.1",
     "concurrently": "^8.2.2",
-    "ember-basic-dropdown": "8.0.0-beta.7",
+    "ember-basic-dropdown": "8.0.0-beta.8",
     "ember-concurrency": "^4.0.0",
-    "ember-power-calendar": "0.22.0-beta.7",
+    "ember-power-calendar": "0.22.0-beta.8",
     "ember-source": "~5.6.0",
     "ember-template-lint": "^5.13.0",
     "eslint": "^8.57.0",
@@ -133,8 +133,8 @@
     "@ember/test-helpers": "^2.9.4 || ^3.2.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
-    "ember-basic-dropdown": "8.0.0-beta.7",
+    "ember-basic-dropdown": "8.0.0-beta.8",
     "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
-    "ember-power-calendar": "0.22.0-beta.7"
+    "ember-power-calendar": "0.22.0-beta.8"
   }
 }
