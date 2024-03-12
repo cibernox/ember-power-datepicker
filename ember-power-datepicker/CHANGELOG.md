@@ -3,6 +3,14 @@
 
 
 
+## v1.0.0 (2024-03-12)
+
+Braking changes:
+
+* Addon is now a V2 addon
+* Addon is now written in Typescript
+* You need to add `ember-basic-dropdown` v8, `ember-power-calendar` v1 & `ember-concurrency` (v4) to your dependencies
+
 ## v0.12.0-beta.5 (2024-03-05)
 
 #### :rocket: Enhancement
