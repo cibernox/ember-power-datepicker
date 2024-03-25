@@ -184,11 +184,11 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4(@ember/string@3.1.1)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-source@5.7.0)
       ember-concurrency:
-        specifier: ^4.0.1
-        version: 4.0.1(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0)
+        specifier: ^4.0.2
+        version: 4.0.2(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0)
       ember-power-calendar:
         specifier: ^1.0.1
-        version: 1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.1)(ember-source@5.7.0)
+        version: 1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.2)(ember-source@5.7.0)
       ember-source:
         specifier: ~5.7.0
         version: 5.7.0(@babel/core@7.24.0)(@glimmer/component@1.1.2)(@glint/template@1.3.0)(rsvp@4.8.5)(webpack@5.91.0)
@@ -413,8 +413,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2
       ember-concurrency:
-        specifier: ^4.0.1
-        version: 4.0.1(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0)
+        specifier: ^4.0.2
+        version: 4.0.2(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0)
       ember-fetch:
         specifier: ^8.1.2
         version: 8.1.2
@@ -429,7 +429,7 @@ importers:
         version: 8.2.3(ember-source@5.7.0)
       ember-power-calendar:
         specifier: ^1.0.1
-        version: 1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.1)(ember-source@5.7.0)
+        version: 1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.2)(ember-source@5.7.0)
       ember-power-calendar-moment:
         specifier: ^1.0.2
         version: 1.0.2(@babel/core@7.24.0)(@glint/template@1.3.0)(ember-power-calendar@1.0.1)(moment@2.30.1)
@@ -6986,13 +6986,16 @@ packages:
       - '@babel/core'
       - supports-color
 
-  /ember-concurrency@4.0.1(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0):
-    resolution: {integrity: sha512-U6tEmQRPJg+qUAFM2Ub1pSSqa2AtaGZreCB6bsR3IkpiMPn19HpeebOwOIqgdE+10eUHYTXHgcsopWmPyYkHnA==}
+  /ember-concurrency@4.0.2(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0):
+    resolution: {integrity: sha512-enmStRE8bHIeF/kPZoDZlzP9YINN7H8l3Myk1sVkqo235ph0Vjee37AGCw44eRq6cBRvcdQmb5K3pkzVY7A6WA==}
     engines: {node: 16.* || >= 18}
     peerDependencies:
       '@glimmer/tracking': ^1.1.2
       '@glint/template': '>= 1.0.0'
       ember-source: ^3.28.0 || ^4.0.0 || >=5.0.0
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
     dependencies:
       '@babel/helper-plugin-utils': 7.24.0
       '@babel/types': 7.24.0
@@ -7160,7 +7163,7 @@ packages:
       '@embroider/addon-shim': 1.8.7
       '@embroider/macros': 1.15.0(@glint/template@1.3.0)
       decorator-transforms: 1.1.0(@babel/core@7.24.0)
-      ember-power-calendar: 1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.1)(ember-source@5.7.0)
+      ember-power-calendar: 1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.2)(ember-source@5.7.0)
       moment: 2.30.1
     transitivePeerDependencies:
       - '@babel/core'
@@ -7168,7 +7171,7 @@ packages:
       - supports-color
     dev: true
 
-  /ember-power-calendar@1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.1)(ember-source@5.7.0):
+  /ember-power-calendar@1.0.1(@babel/core@7.24.0)(@ember/test-helpers@3.3.0)(@glimmer/component@1.1.2)(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-concurrency@4.0.2)(ember-source@5.7.0):
     resolution: {integrity: sha512-kBZH3xGWSADAdNT6wdAD657EqluHqsYQrj75nTPuy0A3G2O6NUfgekrTOQ0akwCLe78pY/itj3zgL1Q8SrACrQ==}
     peerDependencies:
       '@ember/test-helpers': ^2.9.4 || ^3.2.1
@@ -7186,7 +7189,7 @@ packages:
       '@glimmer/tracking': 1.1.2
       decorator-transforms: 1.1.0(@babel/core@7.24.0)
       ember-assign-helper: 0.5.0(ember-source@5.7.0)
-      ember-concurrency: 4.0.1(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0)
+      ember-concurrency: 4.0.2(@babel/core@7.24.0)(@glimmer/tracking@1.1.2)(@glint/template@1.3.0)(ember-source@5.7.0)
       ember-element-helper: 0.8.5(@glint/environment-ember-loose@1.3.0)(@glint/template@1.3.0)(ember-source@5.7.0)
       ember-source: 5.7.0(@babel/core@7.24.0)(@glimmer/component@1.1.2)(@glint/template@1.3.0)(rsvp@4.8.5)(webpack@5.91.0)
       ember-truth-helpers: 4.0.3(ember-source@5.7.0)
