@@ -101,7 +101,7 @@
     "ember-basic-dropdown": "^8.0.4",
     "ember-concurrency": "^4.0.2",
     "ember-power-calendar": "^1.0.1",
-    "ember-source": "~5.7.0",
+    "ember-source": "~5.8.0",
     "ember-template-lint": "^6.0.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
