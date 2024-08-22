@@ -12,12 +12,25 @@
   "license": "MIT",
   "author": "Miguel Camba",
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js",
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./declarations/*.d.ts",
+      "default": "./dist/*.js"
+    },
     "./addon-main.js": "./addon-main.cjs",
     "./ember-power-datepicker.less": "./ember-power-datepicker.less",
     "./ember-power-datepicker.scss": "./ember-power-datepicker.scss",
     "./_index.scss": "./_index.scss"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "declarations/*"
+      ]
+    }
   },
   "files": [
     "_index.scss",
