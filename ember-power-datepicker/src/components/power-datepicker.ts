@@ -2,18 +2,24 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import type { DropdownActions } from 'ember-basic-dropdown/components/basic-dropdown';
-import type { CalculatePosition, VerticalPosition, HorizontalPosition } from 'ember-basic-dropdown/utils/calculate-position';
+import type {
+  CalculatePosition,
+  VerticalPosition,
+  HorizontalPosition,
+} from 'ember-basic-dropdown/utils/calculate-position';
 import type { NormalizeCalendarValue } from 'ember-power-calendar/utils';
-import type { CalendarDay, SelectedDays, PowerCalendarActions } from 'ember-power-calendar/components/power-calendar';
+import type {
+  CalendarDay,
+  SelectedDays,
+  PowerCalendarActions,
+} from 'ember-power-calendar/components/power-calendar';
 import type { ComponentLike } from '@glint/template';
 
 interface PowerDatepickerSignature {
   Element: HTMLElement;
   Args: PowerDatepickerArgs;
   Blocks: {
-    default: [
-      PowerDatepickerDefaultBlock,
-    ];
+    default: [PowerDatepickerDefaultBlock];
   };
 }
 
@@ -34,9 +40,7 @@ interface PowerDatepickerArgs {
   locale?: string;
   selected?: SelectedDays;
   closeOnSelect?: boolean;
-  onCenterChange?: (
-    newCenter: NormalizeCalendarValue
-  ) => void;
+  onCenterChange?: (newCenter: NormalizeCalendarValue) => void;
   onSelect?: (
     day: CalendarDay,
     calendar: PowerDatepickerCalendar,
@@ -44,7 +48,9 @@ interface PowerDatepickerArgs {
   ) => void | boolean;
 }
 
-interface PowerDatepickerActions extends DropdownActions, PowerCalendarActions {}
+interface PowerDatepickerActions
+  extends DropdownActions,
+    PowerCalendarActions {}
 
 export interface PowerDatepickerCalendar {
   uniqueId: string;
@@ -59,9 +65,13 @@ export interface PowerDatepickerCalendar {
 }
 
 export interface PowerDatepickerDefaultBlock extends PowerDatepickerCalendar {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Trigger: ComponentLike<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Content: ComponentLike<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Nav: ComponentLike<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Days: ComponentLike<any>;
 }
 
@@ -84,8 +94,12 @@ export default class PowerDatepickerComponent extends Component<PowerDatepickerS
   }
 
   @action
-  handleSelect(day: CalendarDay, datepicker: PowerDatepickerCalendar, e: MouseEvent) {
-    let value = this.args.onSelect && this.args.onSelect(day, datepicker, e);
+  handleSelect(
+    day: CalendarDay,
+    datepicker: PowerDatepickerCalendar,
+    e: MouseEvent,
+  ) {
+    const value = this.args.onSelect && this.args.onSelect(day, datepicker, e);
     if (value === false || !this.closeOnSelect) {
       return;
     }
