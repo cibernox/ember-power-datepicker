@@ -57,7 +57,7 @@ jobs:
         
       - name: Run Tests
         run: pnpm --filter test-app test:ember
-  
+
   floating:
     name: "Floating Dependencies"
     runs-on: ubuntu-latest
