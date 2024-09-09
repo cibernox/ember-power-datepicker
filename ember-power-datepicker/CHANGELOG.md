@@ -3,6 +3,21 @@
 
 
 
+
+## v1.0.1 (2024-09-09)
+
+#### :rocket: Enhancement
+* [#251](https://github.com/cibernox/ember-power-datepicker/pull/251) Update packages ([@mkszepp](https://github.com/mkszepp))
+
+#### :bug: Bug Fix
+* [#249](https://github.com/cibernox/ember-power-datepicker/pull/249) Add missing type export ([@mkszepp](https://github.com/mkszepp))
+
+#### :house: Internal
+* [#250](https://github.com/cibernox/ember-power-datepicker/pull/250) Update addon blueprint ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.0 (2024-03-12)
 
 Braking changes:
