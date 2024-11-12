@@ -4,6 +4,15 @@
 
 
 
+
+## v1.0.3 (2024-11-12)
+
+#### :rocket: Enhancement
+* [#253](https://github.com/cibernox/ember-power-datepicker/pull/253) Allow `@glimmer/component` v2 ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.2 (2024-11-12)
 
 ## v1.0.1 (2024-09-09)
