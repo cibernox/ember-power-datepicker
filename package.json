@@ -11,7 +11,6 @@
     "build:docs": "pnpm run --filter docs build",
     "lint": "pnpm run --filter '*' lint",
     "lint:fix": "pnpm run --filter '*' lint:fix",
-    "prepare": "pnpm run build",
     "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "pnpm run --filter ember-power-datepicker start --no-watch.clearScreen",
     "start:docs": "pnpm run --filter docs start --preserveWatchOutput",
@@ -19,14 +18,14 @@
     "test:ember": "pnpm --filter '*' test:ember"
   },
   "devDependencies": {
-    "@glint/core": "^1.4.0",
+    "@glint/core": "^1.5.0",
     "@release-it-plugins/lerna-changelog": "^7.0.0",
     "@release-it-plugins/workspaces": "^4.2.0",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.1.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-ember-template-tag": "^2.0.2",
-    "release-it": "^17.6.0",
-    "typescript": "^5.5.4"
+    "prettier-plugin-ember-template-tag": "^2.0.4",
+    "release-it": "^17.10.0",
+    "typescript": "^5.6.3"
   },
   "workspaces": [
     "ember-power-datepicker",
@@ -55,6 +54,5 @@
     },
     "npm": false
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
   "version": "1.0.1"
 }
