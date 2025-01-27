@@ -5,6 +5,16 @@
 
 
 
+
+## v1.0.4 (2025-01-27)
+
+#### :house: Internal
+* [#255](https://github.com/cibernox/ember-power-datepicker/pull/255) Update ember-basic-dropdown & ember-power-calendar ([@mkszepp](https://github.com/mkszepp))
+* [#254](https://github.com/cibernox/ember-power-datepicker/pull/254) Update ember cli to 6.1 ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.3 (2024-11-12)
 
 #### :rocket: Enhancement
