@@ -9,36 +9,53 @@
   @verticalPosition={{@verticalPosition}}
   @renderInPlace={{@renderInPlace}}
   @matchTriggerWidth={{@matchTriggerWidth}}
-  ...attributes as |dd|>
+  ...attributes
+  as |dd|
+>
   <PowerCalendar
     @htmlTag=""
     @center={{this.center}}
     @locale={{@locale}}
     @onCenterChange={{this.onCenterChange}}
     @onSelect={{this.handleSelect}}
-    @selected={{@selected}} as |cal|>
-    {{#let (hash
+    @selected={{@selected}}
+    as |cal|
+  >
+    {{#let
+      (hash
         uniqueId=dd.uniqueId
         calendarUniqueId=cal.uniqueId
         isOpen=dd.isOpen
         disabled=dd.disabled
-
         selected=cal.selected
         loading=cal.loading
         center=cal.center
         locale=cal.locale
-
         actions=(assign dd.actions cal.actions)
-      ) as |datepicker|}}
-      {{yield (assign
-        datepicker
-        (hash
-          Trigger=(component (ensure-safe-component dd.Trigger) dropdown=datepicker defaultClass="ember-power-datepicker-trigger")
-          Content=(component (ensure-safe-component dd.Content) dropdown=datepicker defaultClass="ember-power-datepicker-content")
-          Nav=(component (ensure-safe-component cal.Nav) calendar=datepicker)
-          Days=(component (ensure-safe-component cal.Days) calendar=datepicker)
+      )
+      as |datepicker|
+    }}
+      {{yield
+        (assign
+          datepicker
+          (hash
+            Trigger=(component
+              (ensure-safe-component dd.Trigger)
+              dropdown=datepicker
+              defaultClass="ember-power-datepicker-trigger"
+            )
+            Content=(component
+              (ensure-safe-component dd.Content)
+              dropdown=datepicker
+              defaultClass="ember-power-datepicker-content"
+            )
+            Nav=(component (ensure-safe-component cal.Nav) calendar=datepicker)
+            Days=(component
+              (ensure-safe-component cal.Days) calendar=datepicker
+            )
+          )
         )
-      )}}
+      }}
     {{/let}}
   </PowerCalendar>
 </BasicDropdown>

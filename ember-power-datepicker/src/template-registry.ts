@@ -4,6 +4,6 @@
 
 import type PowerDatepickerComponent from './components/power-datepicker';
 
-export default interface EmberPowerDatepickerRegistry {
+export default interface Registry {
   PowerDatepicker: typeof PowerDatepickerComponent;
 }
