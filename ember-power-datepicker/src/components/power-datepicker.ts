@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import type { DropdownActions } from 'ember-basic-dropdown/components/basic-dropdown';
+import type { DropdownActions, BasicDropdownSignature } from 'ember-basic-dropdown/components/basic-dropdown';
 import type {
   CalculatePosition,
   VerticalPosition,
@@ -13,7 +13,7 @@ import type {
   SelectedDays,
   PowerCalendarActions,
 } from 'ember-power-calendar/components/power-calendar';
-import type { ComponentLike } from '@glint/template';
+import type { PowerCalendarDefaultBlock } from 'ember-power-calendar/components/power-calendar';
 
 interface PowerDatepickerSignature {
   Element: HTMLElement;
@@ -65,14 +65,10 @@ export interface PowerDatepickerCalendar {
 }
 
 export interface PowerDatepickerDefaultBlock extends PowerDatepickerCalendar {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Trigger: ComponentLike<any>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Content: ComponentLike<any>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Nav: ComponentLike<any>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Days: ComponentLike<any>;
+    Trigger:  BasicDropdownSignature['Blocks']['default'][0]['Trigger'];
+    Content: BasicDropdownSignature['Blocks']['default'][0]['Content'];
+    Nav: PowerCalendarDefaultBlock['Nav'];
+    Days: PowerCalendarDefaultBlock['Days'];
 }
 
 export default class PowerDatepickerComponent extends Component<PowerDatepickerSignature> {
