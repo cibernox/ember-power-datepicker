@@ -3,7 +3,7 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import type {
   DropdownActions,
-  BasicDropdownSignature,
+  BasicDropdownDefaultBlock,
 } from 'ember-basic-dropdown/components/basic-dropdown';
 import type {
   CalculatePosition,
@@ -68,8 +68,8 @@ export interface PowerDatepickerCalendar {
 }
 
 export interface PowerDatepickerDefaultBlock extends PowerDatepickerCalendar {
-  Trigger: BasicDropdownSignature['Blocks']['default'][0]['Trigger'];
-  Content: BasicDropdownSignature['Blocks']['default'][0]['Content'];
+  Trigger: BasicDropdownDefaultBlock['Trigger'];
+  Content: BasicDropdownDefaultBlock['Content'];
   Nav: PowerCalendarDefaultBlock['Nav'];
   Days: PowerCalendarDefaultBlock['Days'];
 }
