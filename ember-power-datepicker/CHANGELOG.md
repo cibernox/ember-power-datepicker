@@ -7,6 +7,15 @@
 
 
 
+
+## v1.0.6 (2025-02-22)
+
+#### :bug: Bug Fix
+* [#260](https://github.com/cibernox/ember-power-datepicker/pull/260) Use PowerCalendarDefaultBlock (as its fixed in power calendar now) ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.5 (2025-02-22)
 
 #### :bug: Bug Fix
