@@ -4,17 +4,15 @@ import { action } from '@ember/object';
 import type {
   DropdownActions,
   BasicDropdownDefaultBlock,
+  BasicDropdownArgs,
 } from 'ember-basic-dropdown/components/basic-dropdown';
-import type {
-  CalculatePosition,
-  VerticalPosition,
-  HorizontalPosition,
-} from 'ember-basic-dropdown/utils/calculate-position';
 import type { NormalizeCalendarValue } from 'ember-power-calendar/utils';
 import type {
   CalendarDay,
   SelectedDays,
   PowerCalendarActions,
+  PowerCalendarArgs,
+  PowerCalendarAPI,
 } from 'ember-power-calendar/components/power-calendar';
 import type { PowerCalendarDefaultBlock } from 'ember-power-calendar/components/power-calendar';
 
@@ -27,23 +25,22 @@ interface PowerDatepickerSignature {
 }
 
 interface PowerDatepickerArgs {
-  initiallyOpened?: boolean;
-  renderInPlace?: boolean;
-  verticalPosition?: VerticalPosition;
-  horizontalPosition?: HorizontalPosition;
-  destination?: string;
-  disabled?: boolean;
-  matchTriggerWidth?: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-  onOpen?: Function;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-  onClose?: Function;
-  calculatePosition?: CalculatePosition;
+  initiallyOpened?: BasicDropdownArgs['initiallyOpened'];
+  renderInPlace?: BasicDropdownArgs['renderInPlace'];
+  verticalPosition?: BasicDropdownArgs['verticalPosition'];
+  horizontalPosition?: BasicDropdownArgs['horizontalPosition'];
+  destination?: BasicDropdownArgs['destination'];
+  disabled?: BasicDropdownArgs['disabled'];
+  matchTriggerWidth?: BasicDropdownArgs['matchTriggerWidth'];
+  onOpen?: BasicDropdownArgs['onOpen'];
+  onClose?: BasicDropdownArgs['onClose'];
+  calculatePosition?: BasicDropdownArgs['calculatePosition'];
 
-  locale?: string;
-  selected?: SelectedDays;
+  locale?: PowerCalendarArgs['locale'];
+  selected?: PowerCalendarArgs['selected'];
+  onCenterChange?: PowerCalendarArgs['onCenterChange'];
+
   closeOnSelect?: boolean;
-  onCenterChange?: (newCenter: NormalizeCalendarValue) => void;
   onSelect?: (
     day: CalendarDay,
     calendar: PowerDatepickerCalendar,
@@ -84,12 +81,16 @@ export default class PowerDatepickerComponent extends Component<PowerDatepickerS
   }
 
   @action
-  onCenterChange(day: NormalizeCalendarValue) {
+  async onCenterChange(
+    newCenter: NormalizeCalendarValue,
+    calendar: PowerCalendarAPI,
+    event: MouseEvent,
+  ): Promise<void> {
     if (this.args.onCenterChange) {
-      this.args.onCenterChange(day);
+      await this.args.onCenterChange(newCenter, calendar, event);
     }
 
-    this.center = day.date;
+    this.center = newCenter.date;
   }
 
   @action
