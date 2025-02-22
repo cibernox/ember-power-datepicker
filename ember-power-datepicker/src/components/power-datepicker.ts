@@ -13,10 +13,8 @@ import type {
   PowerCalendarActions,
   PowerCalendarArgs,
   PowerCalendarAPI,
+  PowerCalendarDefaultBlock,
 } from 'ember-power-calendar/components/power-calendar';
-import type { PowerCalendarNavSignature } from 'ember-power-calendar/components/power-calendar/nav';
-import type { PowerCalendarDaysSignature } from 'ember-power-calendar/components/power-calendar/days';
-import type { ComponentLike } from '@glint/template';
 
 interface PowerDatepickerSignature {
   Element: HTMLElement;
@@ -69,14 +67,8 @@ export interface PowerDatepickerCalendar {
 export interface PowerDatepickerDefaultBlock extends PowerDatepickerCalendar {
   Trigger: BasicDropdownDefaultBlock['Trigger'];
   Content: BasicDropdownDefaultBlock['Content'];
-  Nav: ComponentLike<{
-    Args: Omit<PowerCalendarNavSignature['Args'], 'calendar'>;
-    Blocks: PowerCalendarNavSignature['Blocks'];
-  }>;
-  Days: ComponentLike<{
-    Args: Omit<PowerCalendarDaysSignature['Args'], 'calendar'>;
-    Blocks: PowerCalendarDaysSignature['Blocks'];
-  }>;
+  Nav: PowerCalendarDefaultBlock['Nav'];
+  Days: PowerCalendarDefaultBlock['Days'];
 }
 
 export default class PowerDatepickerComponent extends Component<PowerDatepickerSignature> {
