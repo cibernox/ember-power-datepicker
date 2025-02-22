@@ -81,7 +81,11 @@ export default class PowerDatepickerComponent extends Component<PowerDatepickerS
   }
 
   @action
-  async onCenterChange(newCenter: NormalizeCalendarValue, calendar: PowerCalendarAPI, event: MouseEvent): Promise<void> {
+  async onCenterChange(
+    newCenter: NormalizeCalendarValue,
+    calendar: PowerCalendarAPI,
+    event: MouseEvent,
+  ): Promise<void> {
     if (this.args.onCenterChange) {
       await this.args.onCenterChange(newCenter, calendar, event);
     }
