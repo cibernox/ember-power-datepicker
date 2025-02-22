@@ -6,6 +6,18 @@
 
 
 
+
+## v1.0.5 (2025-02-22)
+
+#### :bug: Bug Fix
+* [#259](https://github.com/cibernox/ember-power-datepicker/pull/259) Fix Nav & Days signature (avoid passing calendar) ([@mkszepp](https://github.com/mkszepp))
+* [#258](https://github.com/cibernox/ember-power-datepicker/pull/258) Fix typings (use typing from used components) ([@mkszepp](https://github.com/mkszepp))
+* [#256](https://github.com/cibernox/ember-power-datepicker/pull/256) Fix glint signature blocks ([@dagroe](https://github.com/dagroe))
+
+#### Committers: 2
+- Daniel Gröger ([@dagroe](https://github.com/dagroe))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.4 (2025-01-27)
 
 #### :house: Internal

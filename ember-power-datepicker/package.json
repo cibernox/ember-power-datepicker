@@ -1,6 +1,6 @@
 {
   "name": "ember-power-datepicker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An extensible datepicker for Ember",
   "keywords": [
     "ember-addon"
