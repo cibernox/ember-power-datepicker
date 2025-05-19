@@ -8,6 +8,15 @@
 
 
 
+
+## v1.0.7 (2025-05-19)
+
+#### :house: Internal
+* [#261](https://github.com/cibernox/ember-power-datepicker/pull/261) Remove ember-source and glimmer tracking as a peer dependency ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## v1.0.6 (2025-02-22)
 
 #### :bug: Bug Fix
