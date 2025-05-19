@@ -100,8 +100,8 @@
   },
   "peerDependencies": {
     "@glimmer/component": ">=1.1.2",
-    "ember-basic-dropdown": "^8.6.0",
-    "ember-power-calendar": "^1.5.2"
+    "ember-basic-dropdown": "^8.6.1",
+    "ember-power-calendar": "^1.5.4"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
